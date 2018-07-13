@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+/*less = require('gulp-less'),*/
     concatCSS = require('gulp-concat-css'),
     prefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync'),
@@ -16,7 +17,7 @@ var gulp = require('gulp'),
 //runSequence = require('run-sequence'),
 //hash = require('gulp-hash-filename'),
 
-    reload = browserSync.reload,
+reload = browserSync.reload,
 
     src = {
         js: [
@@ -30,7 +31,9 @@ var gulp = require('gulp'),
             /*'src/css/lib/slick.css',
              'src/css/lib/selectric.css'*/
         ],
-        sass: 'src/sass/**/*.scss',
+        html: '*.html',
+        /*sass: 'src/scss/!**!/!*.scss',*/
+        sass: 'src/scss/*.scss',
         fonts: 'src/fonts/**/*',
         img: 'src/img/**/*'
     };
@@ -46,6 +49,7 @@ gulp.task('server', function (callback) {
     });
     gulp.watch(src.sass, ['sass-reload']);
     gulp.watch(src.js, ['js-dev']).on('change', reload);
+    gulp.watch(src.html, ['html-dev']).on('change', reload);
 });
 
 gulp.task('move', function () {
@@ -73,13 +77,28 @@ gulp.task('compile-sass', function () {
     return gulp.src(src.sass)
         .pipe(plumber())
         .pipe(sourcemaps.init())
+        /*.pipe(sass({
+            outputStyle: 'expanded',
+        }))
+        .on('error', sass.logError)*/
         .pipe(sass())
+        /*.pipe(sass().on('error', sass.logError))*/
         .pipe(prefixer({
             browsers: ['last 20 versions'],
             cascade: false
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dev/css'));
+        .pipe(gulp.dest('dev/css/'));
+
+    /*    gulp.src(path.src.style) //Выберем наш main.scss
+     .pipe(sourcemaps.init()) //То же самое что и с js
+     .pipe(importCss()) // импортируем css файлы в main.scss
+     .pipe(sass()) //Скомпилируем/!**!/
+     .pipe(prefixer()) //Добавим вендорные префиксы
+     .pipe(cleancss())
+     .pipe(sourcemaps.write())
+     .pipe(gulp.dest(path.build.css)) //И в build
+     .pipe(reload({stream: true}));*/
 });
 
 gulp.task('reload', function () {
@@ -98,6 +117,12 @@ gulp.task('js-dev', function () {
     return gulp.src(src.js)
         .pipe(plumber())
         .pipe(gulp.dest('dev/js'))
+});
+
+gulp.task('html-dev', function () {
+    return gulp.src(src.html)
+        .pipe(plumber())
+        .pipe(gulp.dest('dev/html'))
 });
 
 gulp.task('js-dist', function () {

@@ -6,3 +6,4 @@
  * Custom
  */
 //= partials/app.js
+alert('hi');
