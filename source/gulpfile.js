@@ -27,7 +27,6 @@ reload = browserSync.reload,
         css: [
             'src/css/main.css',
             /*'src/css/developer.css',*/
-            'src/css/common.css',
             /*'src/css/lib/slick.css',
              'src/css/lib/selectric.css'*/
         ],
@@ -46,6 +45,7 @@ gulp.task('server', function (callback) {
     });
     /*gulp.watch(src.sass, ['sass-reload']);*/
     gulp.watch(src.html).on('change', reload);
+    gulp.watch(src.css).on('change', reload);
     gulp.watch(src.js, ['js-dev']).on('change', reload);
 });
 
