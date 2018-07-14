@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+/*less = require('gulp-less'),*/
     concatCSS = require('gulp-concat-css'),
     prefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync'),
@@ -16,7 +17,7 @@ var gulp = require('gulp'),
 //runSequence = require('run-sequence'),
 //hash = require('gulp-hash-filename'),
 
-    reload = browserSync.reload,
+reload = browserSync.reload,
 
     src = {
         js: [
@@ -30,21 +31,21 @@ var gulp = require('gulp'),
             /*'src/css/lib/slick.css',
              'src/css/lib/selectric.css'*/
         ],
-        sass: 'src/sass/**/*.scss',
-        fonts: 'src/fonts/**/*',
+        html: '*.html',
+        /*sass: 'src/scss/!*.scss',*/
         img: 'src/img/**/*'
     };
 
 gulp.task('server', function (callback) {
-    runSequence('sass-reload', 'js-dev', 'move', callback);
+    /*runSequence('sass-reload', 'js-dev', 'move', callback);*/
+    runSequence('js-dev', 'move', callback);
     browserSync.init({
-        /*proxy: "rplus.zeema.org.ua/"*/
-
         server: {
             baseDir: "./"
         }
     });
-    gulp.watch(src.sass, ['sass-reload']);
+    /*gulp.watch(src.sass, ['sass-reload']);*/
+    gulp.watch(src.html).on('change', reload);
     gulp.watch(src.js, ['js-dev']).on('change', reload);
 });
 
@@ -73,13 +74,14 @@ gulp.task('compile-sass', function () {
     return gulp.src(src.sass)
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
+        /*.pipe(sass())*/
         .pipe(prefixer({
             browsers: ['last 20 versions'],
             cascade: false
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dev/css'));
+        .pipe(gulp.dest('dev/css/'));
 });
 
 gulp.task('reload', function () {
@@ -87,7 +89,8 @@ gulp.task('reload', function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src(['dev/css/**/*.css', '!dev/css/main.css'])
+    /*return gulp.src(['dev/css/!**!/!*.css', '!dev/css/main.css'])*/
+    return gulp.src(['dev/css/**/*.css'])
         .pipe(concatCSS('common.css'))
         .pipe(minCSS())
         .pipe(rename('common.min.css'))
@@ -99,6 +102,12 @@ gulp.task('js-dev', function () {
         .pipe(plumber())
         .pipe(gulp.dest('dev/js'))
 });
+
+/*gulp.task('html-dev', function () {
+    return gulp.src(src.html)
+        .pipe(plumber())
+        .pipe(gulp.dest('dev/html'))
+});*/
 
 gulp.task('js-dist', function () {
     return gulp.src(src.js)
@@ -124,7 +133,8 @@ gulp.task('min-img', function () {
 /// MAIN TASKS ----> ///
 
 gulp.task('dist', function (callback) {
-    runSequence('clean-dist', 'sass-reload', 'min-img', ['styles', 'js-dist'], callback);
+    /*runSequence('clean-dist', 'sass-reload', 'min-img', ['styles', 'js-dist'], callback);*/
+    runSequence('clean-dist', 'min-img', ['styles', 'js-dist'], callback);
 });
 
 gulp.task('default', function (callback) {
