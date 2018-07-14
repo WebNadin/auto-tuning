@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-/*less = require('gulp-less'),*/
     concatCSS = require('gulp-concat-css'),
     prefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync'),
@@ -14,10 +13,10 @@ var gulp = require('gulp'),
     runSequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
     minIMG = require('gulp-imagemin'),
-//runSequence = require('run-sequence'),
-//hash = require('gulp-hash-filename'),
-
-reload = browserSync.reload,
+    jade = require('gulp-jade'),
+    /*runSequence = require('run-sequence'),
+    hash = require('gulp-hash-filename'),*/
+    reload = browserSync.reload,
 
     src = {
         js: [
@@ -31,6 +30,7 @@ reload = browserSync.reload,
              'src/css/lib/selectric.css'*/
         ],
         html: '*.html',
+        jade: 'src/templates/**/*.jade',
         /*sass: 'src/scss/!*.scss',*/
         img: 'src/img/**/*'
     };
@@ -40,13 +40,14 @@ gulp.task('server', function (callback) {
     runSequence('js-dev', 'move', callback);
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dist/"
         }
     });
     /*gulp.watch(src.sass, ['sass-reload']);*/
     gulp.watch(src.html).on('change', reload);
     gulp.watch(src.css).on('change', reload);
-    gulp.watch(src.js, ['js-dev']).on('change', reload);
+    gulp.watch(src.js, ['js-dist']).on('change', reload);
+    gulp.watch(src.jade, ['jade']).on('change', reload);
 });
 
 gulp.task('move', function () {
@@ -97,17 +98,18 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('jade', function() {
+    return gulp.src(src.jade)
+        .pipe(plumber())
+        .pipe(jade())
+        .pipe(gulp.dest('dist/'));
+});
+
 gulp.task('js-dev', function () {
     return gulp.src(src.js)
         .pipe(plumber())
         .pipe(gulp.dest('dev/js'))
 });
-
-/*gulp.task('html-dev', function () {
-    return gulp.src(src.html)
-        .pipe(plumber())
-        .pipe(gulp.dest('dev/html'))
-});*/
 
 gulp.task('js-dist', function () {
     return gulp.src(src.js)
