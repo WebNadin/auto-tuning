@@ -15,8 +15,28 @@ body{
   margin:0 auto;
   width:100%;
 }
-.container {
+.container{
   max-width:1200px;
+}
+.card{
+  border:none;
+  &-img{
+    border-radius:0;
+  }
+}
+.header{
+  background-image:url("/src/img/background-header.jpg");
+  background-size:cover;
+  background-position:top center;
+}
+.social-icons{
+  &__item{
+    opacity:1;
+    transition:opacity 100ms linear 100ms;
+    &:hover{
+      opacity:.7;
+    }
+  }
 }
 /*.main {
 background:$background-gray;

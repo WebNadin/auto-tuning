@@ -1,40 +1,41 @@
 header
-    div.card.text-white
-        img.card-img.w-100(src="/src/img/background-header.jpg", alt="blue gradient")
-        div.card-img-overlay
-            div.container
-                div.row
-                    div.col
-                        div.schedule
-                            div.schedule__item.schedule__item_day
-                                | пн-пт
-                                br
-                                | сб
-                                br
-                                | вс
-                            div.schedule__item
-                                | 9 - 18
-                                br
-                                | сб
-                                br
-                                | вс
-                        div.social-icons
-                            a.social-icons__item
-                                img(src="/src/img/instagram.png")
-                            a.social-icons__item
-                                img(src="/src/img/vk.png")
-                            a.social-icons__item
-                                img(src="/src/img/youtube.png")
-                    div.col
-                        div.logo
-                            img(src="/src/img/logo.png")
-                    div.col
-                        div.contacts
-                            div.contacts__item
-                                | 095-166-00-59
-                                br
-                                | 096-764-13-59
-                                br
-                                | 073-764-13-59
-                            div.contacts__item.contacts__item_email auto.service.family@gmail.com
+    div.text-white.border-0.header.p-3.pb-4
+        div.container
+            div.row
+                div.col.d-flex.flex-column.justify-content-around
+                    div.schedule
+                        div.row
+                            div.col-auto
+                                div.schedule__item.schedule__item_day
+                                    | пн-пт
+                                    br
+                                    | сб
+                                    br
+                                    | вс
+                            div.col-auto
+                                div.schedule__item
+                                    | 9 - 18
+                                    br
+                                    | 10 - 16
+                                    br
+                                    | выходной
+                    div.social-icons
+                        a.social-icons__item.pr-2(href="https://www.instagram.com/pnevmo__garage/")(target="_blank")
+                            img(src="/src/img/instagram.png")
+                        a.social-icons__item.pr-2(href="https://vk.com/pnevmo_garage")(target="_blank")
+                            img(src="/src/img/vk.png")
+                        a.social-icons__item(href="https://www.youtube.com/channel/UCwBzK2RKXVOnmRWi3YFqX0A /")(target="_blank")
+                            img(src="/src/img/youtube.png")
+                div.col-auto
+                    div.logo.text-center.p-1
+                        img(src="/src/img/logo.png")
+                div.col.d-flex.justify-content-end
+                    div.contacts.text-right.d-flex.flex-column.justify-content-around
+                        div.contacts__item
+                            | 095-166-00-59
+                            br
+                            | 096-764-13-59
+                            br
+                            | 073-764-13-59
+                        div.contacts__item.contacts__item_email auto.service.family@gmail.com
 
