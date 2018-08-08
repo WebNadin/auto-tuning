@@ -1,9 +1,41 @@
-div.card.text-white
-    img.card-img.w-100(src="/src/img/car.jpg", alt="black car")
-    div.card-img-overlay.d-flex.flex-column.justify-content-center.align-items-center.w-50.mr-auto.ml-auto
-        h1.card-title Краткий заголовок
-        p.card-text.text-center.
-            Мы лучше всех. купите у нас превморессоры. Они нужны вам позарез. У нас самые свежие пневморессоры в городе
-        a.btn.btn-outline-primary.text-uppercase подробнее
+-var carsList = [{title: "Fiat Doblo",price: "200грн", name:"fiat-doblo"},{title: "Fiat Ducato",price:"100грн",name:"fiat-ducato"},{title: "Ford Raptor",price:"150грн", name:"ford-raptor"},{title: "Ford Transit",price:"150грн",name:"ford-transit"},{title: "Gazel",price:"200грн", name:"gazel"},{title: "Mercedes Benz 316",price:"250грн",name:"mercedes-benz-316"},{title: "Mercedes Benz Vito",price:"300грн", name:"mercedes-benz-vito"},{title: "Mercedes Vario",price:"350грн", name:"mercedes-vario"},{title: "Opel Movano",price:"400грн", name:"opel-movano"},{title: "Opel Vivaro",price:"450грн", name:"opel-vivaro"},{title: "Peugeot Boxer",price:"500грн", name:"peugeot-boxer"},{title: "Renault Master",price:"550грн", name:"renault-master"},{title: "Renault Trafic",price:"600грн", name:"renault-trafic"},{title: "Volga",price:"650грн", name:"volga"},{title: "Volkswagen Crafter",price:"700грн", name:"volkswagen-crafter"},{title: "Volkswagen transporter",price:"750грн", name:"volkswagen-transporter"},]
+// etc...];
+
+mixin auto-card(model)
+    div.card-group.col-12.col-sm-6.col-lg-3.mb-1.mb-sm-4.text-center
+        div.card.auto.shadow-drop-2-center
+            div.card-header
+                span.card-title.auto__title= model.title
+            div.card-body
+                a(href="#")
+                    img.card-img.auto__img(src="/dist/img/cars/" + model.name + ".jpg")
+            div.card-footer
+                p.card-text.auto__pricev= model.price
+
+section.slogan.d-flex.flex-column.justify-content-center.align-items-center.p-2.p-sm-3.p-md-4
+    div.slogan__nav.d-flex.justify-content-end.w-100.swing-in-top-fwd
+        nav.nav.cl-effect-17
+            a.nav-link.active(href='#')(data-hover="Главная")
+                span Главная
+            a.nav-link(href='#') Комплектующие
+            a.nav-link(href='#') Легковые
+            a.nav-link(href='#') ЧАВО
+            a.nav-link(href='#') Контакты
+    div.wr_text.text-center
+        h1.slogan__item.text-center.text-white.mb-4.mb-md-5.mr-auto.ml-auto Cовременные технологии
+            br
+            | по доступной цене
+        p.slogan__item.text-center.text-white.mb-4.mb-md-5.mr-auto.ml-auto.
+            Пневмоподвеска продлит жизнь вашего автомобиля, добавит комфорта в управление новым авто и обеспечит
+            стабильность в работе.
+        a.btn.btn-primary.text-uppercase.slogan__button.mt-3.mb-3 подробнее
+section.kit
+    h2.kit__title.my-5.text-center Комплекты
+    div.kit__gallery.d-flex.flex-wrap
+        for model in carsList
+            +auto-card(model)
+
+
+
 
 

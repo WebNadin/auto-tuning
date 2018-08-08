@@ -1,0 +1,199 @@
+@keyframes shadow-drop-2-center{
+  0%{
+    transform:translateZ(0);
+    box-shadow:0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100%{
+    transform:translateZ(50px);
+    box-shadow:0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+.swing-in-top-fwd {
+	-webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+.shadow-drop-2-center:hover{
+  animation:shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.kit{
+  max-width:1200px;
+  margin:0 auto;
+  &__gallery{
+    .card{
+      &:hover{
+        box-shadow:0 0 20px 1px rgba(0, 0, 0, .5);
+        .card-header, .card-footer{
+        }
+      }
+      &-header, &-footer{
+        padding-left:.25rem;
+        padding-right:.25rem;
+        background-color:$blue;
+        color:$white;
+      }
+    }
+  }
+}
+.auto{
+  &__title{
+    font-weight:bold;
+  }
+}
+.navbar_mob{
+  justify-content: flex-end;
+  padding:0;
+}
+.slogan{
+  background:url("/src/img/car.jpg") center;
+  background-size:cover;
+  color:$blue;
+  position:relative;
+  &__button{
+    &.btn{
+      background-color:$orange;
+      border:none;
+      color:$white !important;
+      &:hover{
+        background-color:$white;
+        /*border-color:$orange;*/
+        color:$orange !important;
+      }
+    }
+  }
+  &__nav{
+    z-index: 3;
+  }
+  .nav-link{
+    box-sizing:border-box;
+    transition:border-bottom .5s linear;
+    /*&:hover{
+      border-bottom:1px solid blue;
+    }*/
+  }
+  nav{
+    font-size: 16px;
+    position: relative;
+  }
+  &__item{
+    width:50%;
+  }
+  &:after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:.5;
+  }
+}
+.wr{
+  &_nav{
+    position:absolute;
+    top:.5rem;
+    right:.5rem;
+    z-index:10;
+  }
+  &_text{
+    position:relative;
+    z-index:2;
+  }
+}
+/* Effect 17: move up fade out, push border */
+.cl-effect-17 a {
+	color: #10649b;
+	text-shadow: none;
+	padding: 10px 0;
+}
+
+.cl-effect-17 a::before {
+	color: #fff;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateY(5px);
+	-moz-transform: translateY(5px);
+	transform: translateY(5px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a:hover::before,
+.cl-effect-17 a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+.cl-effect-17 a:hover::after,
+.cl-effect-17 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}

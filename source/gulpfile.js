@@ -13,11 +13,11 @@ var gulp = require('gulp'),
     runSequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
     minIMG = require('gulp-imagemin'),
-    jade = require('gulp-jade')
+    jade = require('gulp-jade'),
 //runSequence = require('run-sequence'),
 //hash = require('gulp-hash-filename'),
 
-    reload = browserSync.reload,
+    reload = browserSync.reload
 
     src = {
         js: [
