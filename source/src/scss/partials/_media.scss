@@ -58,16 +58,25 @@
   .contacts__item_email{
     font-size:.8rem;
   }
+  .video{
+    width:80%;
+  }
 }
 @media screen and (max-width:768px) {
+  header .logo img{
+    height:35px;
+  }
+  .video{
+    width:87%;
+    &__title{
+      padding:20px 30px;
+    }
+  }
   .wr{
     &_text{
       padding-top:0;
       padding-bottom:0;
     }
-  }
-  header .logo img{
-    height:35px;
   }
 }
 @media screen and (max-width:590px) {
@@ -92,5 +101,9 @@
   }
 }
 @media screen and (max-width:576px) {
-
+  .wr{
+    &_contacts{
+      order:-1;
+    }
+  }
 }

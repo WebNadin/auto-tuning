@@ -38,6 +38,18 @@ section.kit
     div.kit__gallery.d-flex.flex-wrap
         for model in carsList
             +auto-card(model)
+section.recommendations
+    h2.recommendations__title.my-5.text-center Наши работы
+    div.recommendations__video.video
+        div.video__frame
+            iframe(width="560",height="315", src="https://www.youtube.com/embed/j7yBy0pjkyw?rel=0&amp;start=1155", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="allowfullscreen")
+        div.video__title Известный блогер рекомендует
+section.gallery
+    div.slider.slider-for.slick-initialized.slick-slider
+        div.slick-list.draggable(aria-live="polite")
+            div.slick-track
+                div.slick-slide(data-slick-index="0", aria-hidden="true", tabindex="-1", role="option", aria-describedby="slick-slide120")
+
 
 
 
