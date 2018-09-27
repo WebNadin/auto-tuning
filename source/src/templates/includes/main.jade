@@ -12,6 +12,8 @@ mixin auto-card(model)
             div.card-footer
                 p.card-text.auto__price= model.price
 
+
+
 section.slogan.d-flex.flex-column.justify-content-center.align-items-center.p-4
     div.slogan__nav.d-none.d-md-flex.justify-content-end.w-100.swing-in-top-fwd
         nav.nav.cl-effect-17
@@ -38,17 +40,20 @@ section.kit
     div.kit__gallery.d-flex.flex-wrap
         for model in carsList
             +auto-card(model)
-section.recommendations
-    h2.recommendations__title.my-5.text-center Наши работы
+section.recommendations.mt-5
     div.recommendations__video.video
+        div.video__title Блогеры рекомендуют
         div.video__frame
-            iframe(width="560",height="315", src="https://www.youtube.com/embed/j7yBy0pjkyw?rel=0&amp;start=1155", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="allowfullscreen")
-        div.video__title Известный блогер рекомендует
+            iframe(width="560",height="315", src="https://www.youtube.com/embed/j7yBy0pjkyw?rel=0&amp;controls=0&amp;showinfo=0&amp;start=1155", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="allowfullscreen")
 section.gallery
-    div.slider.slider-for.slick-initialized.slick-slider
-        div.slick-list.draggable(aria-live="polite")
-            div.slick-track
-                div.slick-slide(data-slick-index="0", aria-hidden="true", tabindex="-1", role="option", aria-describedby="slick-slide120")
+    h2.recommendations__title.my-5.text-center Наши работы
+    div.slider.slider-main
+        div.slider__item
+            img(src="/dist/img/cars/fiat-doblo.jpg")
+        div.slider__item
+            img(src="/dist/img/cars/fiat-doblo.jpg")
+        div.slider__item
+            img(src="/dist/img/cars/fiat-doblo.jpg")
 
 
 
