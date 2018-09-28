@@ -34,7 +34,7 @@ section.slogan.d-flex.flex-column.justify-content-center.align-items-center.p-4
         p.slogan__item.text-center.text-white.mb-4.mb-md-5.mr-auto.ml-auto.
             Пневмоподвеска продлит жизнь вашего автомобиля, добавит комфорта в управление новым авто и обеспечит
             стабильность в работе.
-        a.btn.btn-warn.text-uppercase.slogan__button.mt-3.mb-3(data-toggle="modal", data-target="#advantages") подробнее
+        a.btn.btn-warn.text-uppercase.slogan__button.mt-3.mb-3(data-toggle="modal", data-target="#advantages") важно знать
 section.kit
     h2.kit__title.my-5.text-center Комплекты
     div.kit__gallery.d-flex.flex-wrap
@@ -46,14 +46,23 @@ section.recommendations.mt-5
         div.video__frame
             iframe(width="560",height="315", src="https://www.youtube.com/embed/j7yBy0pjkyw?rel=0&amp;controls=0&amp;showinfo=0&amp;start=1155", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="allowfullscreen")
 section.gallery
-    h2.recommendations__title.my-5.text-center Наши работы
-    div.slider.slider-main
-        div.slider__item
-            img(src="/dist/img/cars/fiat-doblo.jpg")
-        div.slider__item
-            img(src="/dist/img/cars/fiat-doblo.jpg")
-        div.slider__item
-            img(src="/dist/img/cars/fiat-doblo.jpg")
+    h2.gallery__title.my-5.text-center Наши работы
+    div.gallery__works
+        div.my-slider.slider.slider-for.slick-slider(aria-live="polite")
+        div.slider.slider-nav.slick-slider.slick-dotted
+            div.my-slider__item
+                img(src="/dist/img/cars/fiat-doblo.jpg")
+            div.my-slider__item
+                img(src="/dist/img/cars/fiat-doblo.jpg")
+            div.my-slider__item
+                img(src="/dist/img/cars/fiat-doblo.jpg")
+            div.my-slider__item
+                img(src="/dist/img/cars/fiat-doblo.jpg")
+            div.my-slider__item
+                img(src="/dist/img/cars/fiat-doblo.jpg")
+            div.my-slider__item
+                img(src="/dist/img/cars/fiat-doblo.jpg")
+
 
 
 
