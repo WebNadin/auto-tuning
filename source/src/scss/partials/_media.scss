@@ -66,6 +66,11 @@
   header .logo img{
     height:35px;
   }
+  .gallery{
+    &__works{
+      width:85%;
+    }
+  }
   .video{
     width:87%;
     &__title{

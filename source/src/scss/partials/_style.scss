@@ -83,12 +83,38 @@
     }
   }
 }
+.answers{
+  ol{
+    color:$orange;
+    font-size:1.25rem;
+  }
+  &__text{
+    color:$gray;
+    font-size:1rem;
+  }
+}
 .auto{
   &__title{
     font-weight:bold;
   }
   &__price{
     color:$orange;
+  }
+}
+.gallery{
+  &__title{
+    color:$orange;
+  }
+  &__works{
+    width:90%;
+    margin:0 auto;
+  }
+  .slick-prev:before, .slick-next:before{
+    color:$blue;
+    font-size:30px;
+  }
+  .slick-prev{
+    left:-35px;
   }
 }
 .modal{
