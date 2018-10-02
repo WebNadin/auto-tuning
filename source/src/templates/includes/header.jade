@@ -7,7 +7,7 @@ header
             aria-controls="navbarToggleExternalContent", aria-expanded="false", aria-label="Toggle navigation")
                 span.navbar-toggler-icon
         div.collapse#navbarToggleExternalContent
-            div.p-4
+            div.p-4.text-center
                 a.nav-link.text-white(href='/')
                     span Главная
                 //a.nav-link.text-white(href='#')
@@ -52,13 +52,18 @@ header
                 div.col-12.col-sm-6.col-md-4.col-6.d-flex.justify-content-center.justify-content-sm-end.wr_contacts
                     div.contacts.text-center.text-sm-right.d-flex.flex-column.justify-content-between.mt-4.mt-sm-0.mb-5.mb-sm-0
                         div.contacts__item.mb-2.mb-sm-0
-                            span.heartbeat.d-inline-block.
-                                095-166-00-59
-                            br
-                            | 096-764-13-59
-                            br
-                            span
-                                img
-                            | 073-764-13-59
+                            div.row.justify-content-between
+                                div.col-auto.align-self-end
+                                    a.social-icons__item.bounce-in-top.d-inline-block(href="/pages/contacts.html",
+                                    target="_blank")(data-toggle="tooltip", data-placement="top",
+                                    title="показать на карте")
+                                        img(src="/dist/img/map-icon.png")
+                                div.col-auto
+                                    span.heartbeat.d-inline-block
+                                        | 095-166-00-59
+                                    br
+                                    | 096-764-13-59
+                                    br
+                                    | 073-764-13-59
                         div.contacts__item.contacts__item_email auto.service.family@gmail.com
 
