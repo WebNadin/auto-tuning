@@ -90,11 +90,11 @@ gulp.task('reload', function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('/dev/css/*.css')
+    return gulp.src('dev/css/*.css')
         .pipe(concatCSS('common.css'))
-        .pipe(minCSS())
-        .pipe(rename('common.min.css'))
-        .pipe(gulp.dest('dist'));
+        /*.pipe(minCSS())
+        .pipe(rename('common.min.css'));*/
+        /*.pipe(gulp.dest('dist'));*/
 });
 
 gulp.task('js-dev', function () {
