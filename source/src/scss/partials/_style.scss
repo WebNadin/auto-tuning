@@ -5,7 +5,7 @@
   }
   100%{
     transform:translateZ(50px);
-    box-shadow:0 0 20px 0px rgba(0, 0, 0, 0.35);
+    box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.35);
   }
 }
 @-webkit-keyframes swing-in-top-fwd{
@@ -354,15 +354,15 @@
   }
 }
 .slogan{
-  background:url("/src/img/car.jpg") center;
+  background:url("/dist/img/car.jpg") center;
   background-size:cover;
-  color:$white;
+  color:white;
   position:relative;
   &__button{
     &.btn-warn{
       background-color:$orange;
       border:none;
-      color:$white !important;
+      color:white !important;
       &:hover, &:active{
         background-color:$white;
         /*border-color:$orange;*/
