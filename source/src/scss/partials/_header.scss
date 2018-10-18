@@ -1,114 +1,17 @@
 .header{
-  background:url("../img/header-bg.JPG") no-repeat #fff;
-  background-size:cover; //фон растягивается так, чтобы ширина или высота его равнялись ширине или высоте блока
-  box-sizing:border-box;
-  color:$color-second;
-  display:flex;
-  flex-flow:row wrap;
-  height:700px;
-  justify-content:center;
-  overflow:hidden;
-  padding:40px 180px 30px 180px;
-  @media (max-width:$screen-md-min) {
-    padding:50px 50px 30px 50px;
-  }
-  @media (max-width:585px) {
-    padding:20px 20px 30px 20px;
+  background-image:url("/src/img/background-header.jpg");
+  background-size:cover;
+  background-position:top center;
+  &__content{
+    padding-top:100px;
   }
 }
-.header-buttons{
-  display:flex;
-  flex-flow:row wrap;
-  justify-content:center;
-  margin:32px 0 0 0;
-  &-table{
-    margin-left:20px;
-  }
-}
-.header-main{
-  display:flex;
-  flex-flow:column;
-  flex:100%;
-  margin:auto;
-  text-align:center;
-  p{
-    line-height:1;
-  }
-  &-slogan{
-    font-size:$font-size-h1;
-    font-weight:bold;
-    margin:0 0 30px 0;
-    text-transform:uppercase;
-    @media (max-width:$screen-sm-min) {
-      font-size:$font-size-h1-small;
+.social-icons{
+  &__item{
+    opacity:1;
+    transition:opacity 100ms linear 100ms;
+    &:hover{
+      opacity:.7;
     }
-    @media (max-width:585px) {
-      font-size:$font-size-large;
-    }
-  }
-  &-text{
-    color:$color-second;
-    font-size:$font-size-large;
-    @media (max-width:$screen-sm-min) {
-      font-size:$font-size-h3;
-    }
-    @media (max-width:585px) {
-      font-size:1.4rem;
-    }
-    a{
-      color:$color-second;
-      text-decoration:underline;
-    }
-  }
-}
-.header-top{
-  display:flex;
-  flex-flow:row nowrap;
-  position:relative;
-  width:100%;
-  .fa-reorder{
-    cursor:pointer;
-  }
-}
-.header-top-nav{
-  box-sizing:border-box;
-  display:flex;
-  flex:3;
-  padding:10px 0;
-  transition:right 1s;
-  width:120px;
-  @media (max-width:$screen-md-min) {
-    background-color:$background-second;
-    flex-flow:row wrap;
-    justify-items:flex-end;
-    padding:0 10px;
-    position:absolute;
-    right:-200px;
-    top:0;
-  }
-  &-toggle{
-    box-sizing:border-box;
-    display:none;
-    opacity:.8;
-    position:absolute;
-    right:0;
-    top:0;
-    transition:transform 1s;
-    @media (max-width:$screen-md-min) {
-      display:block;
-    }
-  }
-}
-.header-scroll{
-  align-self:flex-end;
-  font-size:$font-size-small;
-  text-align:center;
-  a{
-    color:$color-second;
-    text-decoration:none;
-  }
-  img{
-    margin-top:10px;
-    width:0.8rem;
   }
 }

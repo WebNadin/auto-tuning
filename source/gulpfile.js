@@ -13,16 +13,17 @@ var gulp = require('gulp'),
     runSequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
     minIMG = require('gulp-imagemin'),
-    jade = require('gulp-jade')
+    jade = require('gulp-jade'),
 //runSequence = require('run-sequence'),
 //hash = require('gulp-hash-filename'),
 
-    reload = browserSync.reload,
+    reload = browserSync.reload
 
     src = {
         js: [
-            'src/js/lib/bootstrap.min.js',
-            'src/js/lib/jquery-3.3.1.min.js',
+            'src/js/lib/*.js',
+            /*'src/js/lib/bootstrap.min.js',
+            'src/js/lib/jquery-3.3.1.min.js',*/
             'src/js/main.js'
         ],
         /*css: [
@@ -89,11 +90,11 @@ gulp.task('reload', function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('/dev/css/*.css')
+    return gulp.src('dev/css/*.css')
         .pipe(concatCSS('common.css'))
-        .pipe(minCSS())
-        .pipe(rename('common.min.css'))
-        .pipe(gulp.dest('dist'));
+        /*.pipe(minCSS())
+        .pipe(rename('common.min.css'));*/
+        /*.pipe(gulp.dest('dist'));*/
 });
 
 gulp.task('js-dev', function () {
