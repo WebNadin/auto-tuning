@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+    include ../includes/head
+    body
+        include ../includes/header
+        div.menu.d-none.d-md-flex.justify-content-end.w-100.swing-in-top-fwd
+            nav.nav.cl-effect-17
+                a.nav-link(href='/')(data-hover="Главная")
+                    span Главная
+                //a.nav-link(href='#')(data-hover="Комплектующие")
+                    span Комплектующие
+                //a.nav-link(href='#')(data-hover="Легковые")
+                    span Легковые
+                a.nav-link.active(href='/pages/answers.html')(data-hover="ЧаВо")
+                    span ЧаВо
+                a.nav-link(href='/pages/contacts.html')(data-hover="Контакты")
+                    span Контакты
+        include ../includes/brand-main.jade
+        include ../includes/footer
+        include ../includes/scripts
+
