@@ -195,6 +195,22 @@
     animation-timing-function:ease-out;
   }
 }
+@keyframes swing-in-left-fwd{
+  0%{
+    -webkit-transform:rotateY(100deg);
+    transform:rotateY(100deg);
+    -webkit-transform-origin:left;
+    transform-origin:left;
+    opacity:0;
+  }
+  100%{
+    -webkit-transform:rotateY(0);
+    transform:rotateY(0);
+    -webkit-transform-origin:left;
+    transform-origin:left;
+    opacity:1;
+  }
+}
 .bounce-in-top{
   animation:bounce-in-top 1.1s 3s both
 }
@@ -207,8 +223,9 @@
 .shadow-drop-2-center:hover{
   animation:shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.swing-in-top-fwd{
-  animation:swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+.swing-in-left-fwd{
+  -webkit-animation:swing-in-left-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
+  animation:swing-in-left-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
 }
 .kit{
   max-width:1200px;
@@ -249,12 +266,20 @@
     color:$orange;
   }
 }
-.contacts{
-  ifrime{
-    border:5px solid $orange;
+.brand{
+  &__img{
+    box-shadow:5px 0px 16px rgba(0, 0, 0, 0.2);
   }
   &__title{
     color:$blue;
+  }
+  tr.border-bottom td{
+    border-bottom:1px solid #dee2e6;
+  }
+}
+.contacts{
+  ifrime{
+    border:5px solid $orange;
   }
   a{
     color:white;
@@ -263,7 +288,6 @@
 .draw-attention{
   color:$orange;
 }
-
 .text-white a{
   color:white;
 }

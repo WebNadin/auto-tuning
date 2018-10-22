@@ -1,22 +1,24 @@
-section.brand
-    div.container.my-5.my-md-0
-        div.row
-            div.col-12.col-sm-6
-                img(src="/dist/img/cars/ford-transit.jpg").img-fluid.p-2
-            div.col-12.col-sm-6
-                div.set
-                table.table.table-striped
-                    tbody
-                        tr
-                            td.set__name Эконом
-                            td.text-right 5500грн
-                        tr
-                            td.set__name Стандарт
-                                span.best-seller
-                            td.text-right 8000грн
-                        tr
-                            td.set__name Бюджет
-                            td.text-right 12800грн
-                        tr
-                            td.set__name Премиум
-                            td.text-right 18000грн
+section.brand.nn-container.mb-4.mb-lg-5.px-3.px-lg-0
+    h2.brand__title.my-5.text-center Ford Transit
+    div.row.justify-content-around
+        div.col-12.col-lg-5.text-center.slide-fwd-center.mb-5.mb-lg-0
+            img(src="/dist/img/cars/ford-transit.jpg").brand__img.img-fluid.w-100
+        div.col-12.col-lg-6.align-self-center
+            div.set
+            table.table.table-hover
+                tbody
+                    tr
+                        td.set__name Эконом
+                        td.text-right 5500грн
+                    tr
+                        td.set__name Бюджет
+                            span.best-seller
+                        td.text-right 8000грн
+                    tr
+                        td.set__name Стандарт
+                            span.brand__hit.d-inline-block.swing-in-left-fwd.pl-5
+                                img(src="/dist/img/icons/hit.png").brand__hit.img-fluid
+                        td.text-right 12800грн
+                    tr.border-bottom
+                        td.set__name Премиум
+                        td.text-right от 18000грн

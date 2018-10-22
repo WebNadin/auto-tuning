@@ -18,7 +18,12 @@ body{
 a[href^=tel]{
   color:white;
 }
-.container{
+/*.table td{
+  border:0;
+}*/
+
+.nn-container{
+  margin:0 auto;
   max-width:1200px;
 }
 
