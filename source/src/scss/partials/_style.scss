@@ -259,6 +259,7 @@
   }
 }
 .auto{
+  cursor: pointer;
   &__title{
     font-weight:bold;
   }
@@ -272,6 +273,7 @@
   }
   &__title{
     color:$blue;
+    text-transform:capitalize;
   }
   tr.border-bottom td{
     border-bottom:1px solid #dee2e6;
