@@ -398,10 +398,19 @@
 
 .icon{
   &_info{
+    background: url('/dist/img/icons/info-3.png');
+    cursor:pointer;
     display:inline-block;
-    background: url('/dist/img/icons/info.png') -10px -10px;
-    height:20px;
-    width:20px;
+    height: 20px;
+    opacity:.4;
+    position:relative;
+    top:4px;
+    left:15px;
+    width: 20px;
+    &:hover{
+      opacity:1;
+      /*background: url('/dist/img/icons/info.png') -55px -10px;*/
+    }
   }
 }
 

@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-
-
-
     $('.navbar-toggler').click(function () {
         $('.wr_nav').css('background-color', 'blue');
         if ($('#navbarToggleExternalContent').hasClass('show')) {
@@ -38,7 +34,6 @@ $(document).ready(function () {
     $('.auto').click(function (title, local_brand, local_srcImg) {
         var brand = $(this).find('.auto__title').text();
         var srcImg = $(this).find('.auto__img').attr('src');
-        console.log('srcImg = ');console.log(srcImg);
         localStorage.setItem('local_brand', brand);
         localStorage.setItem('local_srcImg', srcImg);
     });
@@ -47,16 +42,8 @@ $(document).ready(function () {
         var brandPhoto = localStorage.getItem('local_srcImg');
         $('.brand__title').text(title);
         $('.brand__img').attr('src',brandPhoto);
-        console.log('brandPhoto = ');
-        console.log(brandPhoto);
     }
     addTitle();
-
-
 });
 
-/*function openBrand(brand) {
- var title = brand;
- console.log('title = ');console.log(title);
- }*/
 
