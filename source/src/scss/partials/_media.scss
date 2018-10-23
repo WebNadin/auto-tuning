@@ -117,3 +117,22 @@
     }
   }
 }
+@media screen and (max-width:540px) {
+  .brand__hit{
+    width:100px;
+  }
+}
+@media screen and (max-width:480px) {
+  .brand{
+    &__hit{
+      display:none;
+      width:70px;
+    }
+    .table{
+      font-size:15px;
+      td{
+        padding:.25rem !important;
+      }
+    }
+  }
+}
