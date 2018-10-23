@@ -1,3 +1,4 @@
+/*Animista*/
 @keyframes shadow-drop-2-center{
   0%{
     transform:translateZ(0);
@@ -211,6 +212,7 @@
     opacity:1;
   }
 }
+
 .bounce-in-top{
   animation:bounce-in-top 1.1s 3s both
 }
@@ -227,6 +229,21 @@
   -webkit-animation:swing-in-left-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
   animation:swing-in-left-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
 }
+/*end Animista*/
+
+
+/*Sprites*/
+.bg-info {
+    width: 50px; height: 50px;
+    background: url('/dist/img/icons/info.png') -10px -10px;
+}
+.bg-info-hover {
+    width: 50px; height: 50px;
+    background: url('/dist/img/icons/info.png') -80px -10px;
+}
+/*end sprites*/
+
+/*Main*/
 .kit{
   max-width:1200px;
   margin:0 auto;
@@ -287,12 +304,7 @@
     color:white;
   }
 }
-.draw-attention{
-  color:$orange;
-}
-.text-white a{
-  color:white;
-}
+
 .gallery{
   &__title{
     color:$orange;
@@ -383,6 +395,16 @@
     margin:0 auto 60px;
   }
 }
+
+.icon{
+  &_info{
+    display:inline-block;
+    background: url('/dist/img/icons/info.png') -10px -10px;
+    height:20px;
+    width:20px;
+  }
+}
+
 .slogan{
   background:url("/dist/img/car.jpg") center;
   background-size:cover;

@@ -32,7 +32,7 @@ $(document).ready(function () {
     }
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
 
 
     $('.auto').click(function (title, local_brand, local_srcImg) {
@@ -40,14 +40,15 @@ $(document).ready(function () {
         var srcImg = $(this).find('.auto__img').attr('src');
         console.log('srcImg = ');console.log(srcImg);
         localStorage.setItem('local_brand', brand);
-        /*localStorage.setItem('local_srcImg', srcImg);*/
-    })
+        localStorage.setItem('local_srcImg', srcImg);
+    });
     function addTitle(title, local_brand, local_srcImg) {
         var title = localStorage.getItem('local_brand');
         var brandPhoto = localStorage.getItem('local_srcImg');
         $('.brand__title').text(title);
-        console.log('title2 = ');
-        console.log(title);
+        $('.brand__img').attr('src',brandPhoto);
+        console.log('brandPhoto = ');
+        console.log(brandPhoto);
     }
     addTitle();
 
