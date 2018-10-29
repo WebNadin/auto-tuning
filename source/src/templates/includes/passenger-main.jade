@@ -1,0 +1,147 @@
+div.modal.fade(id="set_economical", tabindex="-1", role="dialog" aria-labelledby="economicalLabel", aria-hidden="true")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header.py-2
+                h5.modal-title(id="economicalLabel") В состав комплекта входят:
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            div.modal-body
+                ol
+                    li
+                        span Комплект крепежа
+                    li
+                        span Пневморессоры производства Fabio или Connect или любой другой производитель
+                    li
+                        span Пластиковая трубка высокого давления производство Италия
+                    li
+                        span Штуцера Италия
+                    li
+                        span Нипель на подкачку
+
+div.modal.fade(id="set_budget", tabindex="-1", role="dialog" aria-labelledby="budgetLabel", aria-hidden="true")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header.py-2
+                h5.modal-title(id="budgetLabel") В состав комплекта входят:
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            div.modal-body
+                ol
+                    li
+                        span Комплект крепежа
+                    li
+                        span Пневморессоры производства Fabio или Connect или любой другой производитель
+                    li
+                        span Пластиковая трубка высокого давления производство Италия
+                    li
+                        span Штуцера Италия
+                    li
+                        span Компрессор
+                    li
+                        span Реле
+                    li
+                        span Манометр
+                    li
+                        span Кнопки
+
+div.modal.fade(id="set_standard", tabindex="-1", role="dialog" aria-labelledby="standardLabel", aria-hidden="true")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header.py-2
+                h5.modal-title(id="standardLabel") В состав комплекта входят:
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            div.modal-body
+                ol
+                    li
+                        span Комплект крепежа
+                    li
+                        span Пневморессоры производства Fabio или Connect или любой другой производитель
+                    li
+                        span Пластиковая трубка высокого давления производство Италия
+                    li
+                        span Штуцера Италия
+                    li
+                        span Компрессор
+                    li
+                        span Пресостат
+                    li
+                        span Блок предохранителей
+                    li
+                        span Реле
+                    li
+                        span Манометр
+                    li
+                        span Пневмораспределитель Италия
+                    li
+                        span Влагоотделитель
+                    li
+                        span Ресивер
+
+div.modal.fade(id="set_premium", tabindex="-1", role="dialog" aria-labelledby="premiumLabel", aria-hidden="true")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header.py-2
+                h5.modal-title(id="premiumLabel") В состав комплекта входят:
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            div.modal-body
+                ol
+                    li
+                        span Комплект крепежа
+                    li
+                        span Пневморессоры производства Fabio или Connect или любой другой производитель
+                    li
+                        span Пластиковая трубка высокого давления производство Италия
+                    li
+                        span Штуцера Италия
+                    li
+                        span Компрессор
+                    li
+                        span Пресостат
+                    li
+                        span Блок предохранителей
+                    li
+                        span Реле
+                    li
+                        span Манометр
+                    li
+                        span Блок клапанов 2х или 4х контурный
+                    li
+                        span Влагоотделитель
+                    li
+                        span Ресивер
+                    li
+                        span Кнопки
+                    li
+                        span Кран уровня пола
+                    li
+                        span Мозги (Блок управления)
+
+section.brand.nn-container.mb-4.mb-lg-5.px-3.px-lg-0
+    h2.brand__title.my-5.text-center
+    div.row.justify-content-around
+        div.col-12.col-lg-5.text-center.slide-fwd-center.mb-5.mb-lg-0
+            img(src="").brand__img.img-fluid
+        div.col-12.col-lg-6.align-self-center
+            table.table.table-hover
+                tbody
+                    tr
+                        td.set__name Эконом
+                            span.icon_info(data-toggle="modal", data-target="#set_economical")
+                            //span.icon_info(data-toggle="tooltip", data-placement="right",title="состав комплекта")
+                        td.text-right 5500грн
+                    tr
+                        td.set__name Бюджет
+                            span.icon_info(data-toggle="modal", data-target="#set_budget")
+                        td.text-right 8000грн
+                    tr.draw-attention
+                        td.set__name Стандарт
+                            span.icon_info(data-toggle="modal", data-target="#set_standard")
+                            span.brand__hit.d-inline-block.swing-in-left-fwd.ml-4.ml-sm-5
+                                img(src="/dist/img/icons/hit.png").brand__hit.img-fluid
+                        td.text-right 12800грн
+                    tr.border-bottom
+                        td.set__name Премиум
+                            span.icon_info(data-toggle="modal", data-target="#set_premium")
+                        td.text-right от 18000грн
