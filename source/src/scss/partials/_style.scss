@@ -205,8 +205,8 @@
     opacity:0;
   }
   100%{
-    -webkit-transform:rotateY(0);
-    transform:rotateY(0);
+    -webkit-transform:rotateY(0deg);
+    transform:rotateY(0deg);
     -webkit-transform-origin:left;
     transform-origin:left;
     opacity:1;
@@ -231,14 +231,7 @@
 /*end Animista*/
 
 /*Sprites*/
-.bg-info{
-  width:50px; height:50px;
-  background:url('/dist/img/icons/info.png') -10px -10px;
-}
-.bg-info-hover{
-  width:50px; height:50px;
-  background:url('/dist/img/icons/info.png') -80px -10px;
-}
+
 /*end sprites*/
 
 /*Main*/
@@ -395,7 +388,7 @@
 }
 .icon{
   &_info{
-    background:url('/dist/img/icons/info.png');
+    background:url('dist/img/icons/info.png');
     cursor:pointer;
     display:inline-block;
     height:20px;
@@ -406,7 +399,6 @@
     width:20px;
     &:hover{
       opacity:1;
-      /*background: url('/dist/img/icons/info.png') -55px -10px;*/
     }
   }
 }
