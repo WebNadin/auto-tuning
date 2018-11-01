@@ -1,0 +1,42 @@
+-var fittingsList = [{title: "Фитинг прямой с наружной резьбой С1", price: "70грн", name:"fitting-c1"},{title: "Фитинг прямой с наружной резьбой С1", price: "70грн", name:"fitting-c1"},{title: "Ford Raptor",price:"5500грн", name:"ford-raptor"},{title: "Ford Transit",price:"5500грн",name:"ford-transit"},{title: "Gazel",price:"5500грн", name:"gazel"},{title: "Mercedes Benz 316",price:"5500грн",name:"mercedes-benz-316"},{title: "Mercedes Benz Vito",price:"5500грн", name:"mercedes-benz-vito"},{title: "Mercedes Vario",price:"5500грн", name:"mercedes-vario"},{title: "Opel Movano",price:"5500грн", name:"opel-movano"},{title: "Opel Vivaro",price:"5500грн", name:"opel-vivaro"},{title: "Peugeot Boxer",price:"5500грн", name:"peugeot-boxer"},{title: "Renault Master",price:"5500грн", name:"renault-master"},{title: "Renault Trafic",price:"5500грн", name:"renault-trafic"},{title: "Volga",price:"5500грн", name:"volga"},{title: "Volkswagen Crafter",price:"5500грн", name:"volkswagen-crafter"},{title: "Volkswagen transporter",price:"5500грн", name:"volkswagen-transporter"},]// etc...];
+
+mixin fittings-card-table(fitting)
+    div.card-group.col-12.col-sm-6.col-lg-3.mb-1.mb-sm-4.text-center
+        div.card.fitting.shadow-drop-2-center
+            div.card-header
+                span.card-title.auto__title= fitting.title
+            div.card-body
+                //a(href="pages/brand.html")
+                img.card-img(src="/dist/img/fittings/" + fitting.name + ".jpg")
+                div.card-footer
+                p.card-text= fitting.price
+
+
+section.kit
+    h2.kit__title.my-5.text-center Фитинги test
+    div.kit__gallery.d-flex.flex-wrap
+        for fitting in fittingsList
+            +fittings-card-table(fitting)
+
+p Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая, резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
+table.table.table-hover
+    tbody
+        tr
+            td.set__name Эконом
+                span.icon_info(data-toggle="modal", data-target="#set_economical")
+                //span.icon_info(data-toggle="tooltip", data-placement="right",title="состав комплекта")
+            td.text-right 5500грн
+        tr
+            td.set__name Бюджет
+                span.icon_info(data-toggle="modal", data-target="#set_budget")
+            td.text-right 8000грн
+        tr.draw-attention
+            td.set__name Стандарт
+                span.icon_info(data-toggle="modal", data-target="#set_standard")
+                span.brand__hit.d-inline-block.swing-in-left-fwd.ml-4.ml-sm-5
+                    img(src="/dist/img/icons/hit.png").brand__hit.img-fluid
+            td.text-right 12800грн
+        tr.border-bottom
+            td.set__name Премиум
+                span.icon_info(data-toggle="modal", data-target="#set_premium")
+            td.text-right от 18000грн

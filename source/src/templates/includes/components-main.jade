@@ -6,7 +6,7 @@ mixin components-card(folder)
             div.card-header
                 span.card-title.component-group__title= folder.title
             div.card-body
-                a(href="pages/" + folder.name + ".html")
+                a(href= folder.name + ".html")
                     img.card-img.component-group__img(src="/dist/img/components/" + folder.name + ".jpg")
 
 section.kit
