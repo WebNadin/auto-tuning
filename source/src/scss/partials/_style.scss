@@ -251,7 +251,6 @@
       }
       &-header{
         background-color:$blue;
-        text-transform: capitalize;
       }
     }
   }
@@ -271,6 +270,7 @@
   cursor:pointer;
   &__title{
     font-weight:bold;
+    text-transform: capitalize;
   }
   &__price{
     color:$orange;
@@ -542,3 +542,4 @@
   -moz-transform:translateY(0px);
   transform:translateY(0px);
 }
+
