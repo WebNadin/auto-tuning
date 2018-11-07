@@ -270,7 +270,7 @@
   cursor:pointer;
   &__title{
     font-weight:bold;
-    text-transform: capitalize;
+    text-transform:capitalize;
   }
   &__price{
     color:$orange;
@@ -294,6 +294,11 @@
   }
   a{
     color:white;
+  }
+}
+.fittings{
+  &__type{
+    text-transform:capitalize;
   }
 }
 .gallery{

@@ -1,68 +1,94 @@
 -
     var fittingsList = [{title: "Фитинг прямой с наружной резьбой С1", price: "43грн", name:"c1"},
-    {title:"Фитинг угловой с внутренней резьбой С5/F", price: "48грн", name:"fitting-c5f"},
-    {title: "Фитинг соеденитель переход С4",price:"67грн",name:"fitting-c4"},
-    {title: "Фитинг тройник С9",price:"72грн",name:"fitting-c9"},
-    {title: "Фитинг соединитель переход С3",price:"45грн", name:"fitting-c3"},
-    {title: "Фитинг тройник с наружной резьбой С7",price:"85грн",name:"fitting-c7"},
-    {title: "Фитинг прямой с внутренней резьбой С2",price:"44грн", name:"fitting-c7"},
-    {title: "Фитинг четверной С11",price:"95грн", name:"fitting-c11"}];
+    {title:"Фитинг угловой с внутренней резьбой С5/F", price: "48грн", name:"c5f"},
+    {title: "Фитинг соеденитель переход С4",price:"67грн",name:"c4"},
+    {title: "Фитинг тройник С9",price:"72грн",name:"c9"},
+    {title: "Фитинг соединитель переход С3",price:"45грн", name:"c3"},
+    {title: "Фитинг тройник с наружной резьбой С7",price:"85грн",name:"c7"},
+    {title: "Фитинг прямой с внутренней резьбой С2",price:"44грн", name:"c2"},
+    {title: "Фитинг четверной С11",price:"95грн", name:"c11"}];
+
+-
+    var cList = [
+    {
+    title: "C1",
+    diameter: ["4/2", "5/3", "6/4", "6/4","8/6", "8/6","10/8", "10/8"],
+    thread: ["1/8", "1/8", "1/8", "1/4", "1/8", "1/4", "1/8", "1/4"]
+    },
+    {
+    title: "C2",
+    diameter: ["6/4", "6/4", "8/6", "8/6", "8/6","10/8", "10/8", "10/8"],
+    thread: ["1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2"]
+    },
+    {
+    title: "C3",
+    diameter: ["6/4", "8/6", "10/8", "12/10"]
+    },
+    {
+    title: "C4",
+    diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"]
+    },
+    {
+    title: "C5/F",
+    diameter: ["6/4", "8/6"],
+    thread: ["1/8", "1/4"]
+    },
+    {
+    title: "C7",
+    diameter: ["5/3", "6/4", "6/4","8/6", "8/6", "8/6","10/8", "10/8", "10/8", "12/10", "12/10"],
+    thread: ["1/8", "1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2", "3/8", "1/2"]
+    },
+    {
+    title: "C9",
+    diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"]
+    },
+    {
+    title: "C11",
+    diameter: ["6/4", "8/6", "10/8"]
+    }
+    ];
+
+-
+    each fitting in fittingsList
+        each c in cList
+            if c.title == fitting.name
+                fitting.cList = c
+                fitting.type = c.name
+
+
+mixin c-table(c)
+    table.table.table-hover.table-sm
+        thead
+            tr
+                th Ref.
+                th &#8960
+                th Thread
+        tbody
+            each diameter in c.diameter
+                tr
+                    td.fittings__type= c.title
+                    td= index
+                    td= c.thread
+
+
 
 mixin fittings-card-table(fitting)
     div.card-group.col-12.mb-1.mb-sm-4.text-center
-        div.card.fitting.col-5
+        div.card.fitting
             div.card-header
                 span.card-title.fitting__title= fitting.title
             div.card-body
                 img.card-img(src="/dist/img/fittings/" + fitting.name + ".jpg")
             div.card-footer
                 p.card-text.draw-attention= fitting.price
-        div.card.fitting.col-7
+        div.card.fitting
             p.card-text Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая, резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
             div.card-body
-                table.table.table-hover.table-sm
-                    thead
-                        tr
-                            th Ref.
-                            th &#8960
-                            th Thread
-                    tbody
-                        - var type = fitting.name
-                        tr
-                            td #{type}
-                        for c in c1
-                            +c-table(c)
+            for c in cList
+                +c-table(c)
 
--
-    var c1 = [
-    {ref:"C1",diameter: "4/2", thread:"1/8"},
-    {ref:"C1",diameter: "5/3", thread:"1/8"},
-    {ref:"C1",diameter: "6/4", thread:"1/8"},
-    {ref:"C1",diameter: "6/4", thread:"1/4"},
-    {ref:"C1",diameter: "8/6", thread:"1/8"},
-    {ref:"C1",diameter: "8/6", thread:"1/4"},
-    {ref:"C1",diameter: "10/8", thread:"1/8"},
-    {ref:"C1",diameter: "10/8", thread:"1/4"}
-    ];
-
--
-    var c2 = [
-    {ref:"C2",diameter: "4/2", thread:"1/8"},
-    {ref:"C2",diameter: "5/3", thread:"1/8"},
-    {ref:"C2",diameter: "6/4", thread:"1/8"},
-    {ref:"C2",diameter: "6/4", thread:"1/4"},
-    {ref:"C2",diameter: "8/6", thread:"1/8"},
-    {ref:"C2",diameter: "8/6", thread:"1/4"},
-    {ref:"C2",diameter: "10/8", thread:"1/8"},
-    {ref:"C2",diameter: "10/8", thread:"1/4"}
-    ];
-
-
-mixin c-table(c)
-    tr
-        td= c.ref
-        td= c.diameter
-        td= c.thread
+for c in cList
+    +c-table(c)
 
 section.kit
     h2.kit__title.my-5.text-center Фитинги
