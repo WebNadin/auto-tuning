@@ -46,4 +46,30 @@ $(document).ready(function () {
     addTitle();
 });
 
+var data = {
+    'name': "files",
+    'type': "folder",
+    'path': "files",
+    'items': {
+        0: {
+            'name': "Cool_Reader",
+            'type': "folder",
+            'path': "files/Cool_Reader",
+            'items': {
+                0: {
+                    'name': "1",
+                    'type': "folder",
+                    'path': "files/Cool_Reader/1",
+                    'items': null
+                },
+                1: {
+                    'name': "2",
+                    'type': "folder",
+                    'path': "files/Cool_Reader/2",
+                    'items': null
+                }
+            }
+        }
+    }
+};
 

@@ -1,5 +1,5 @@
 -
-    var fittingsList = [{title: "Фитинг прямой с наружной резьбой С1", price: "43грн", name:"fitting-c1"},
+    var fittingsList = [{title: "Фитинг прямой с наружной резьбой С1", price: "43грн", name:"c1"},
     {title:"Фитинг угловой с внутренней резьбой С5/F", price: "48грн", name:"fitting-c5f"},
     {title: "Фитинг соеденитель переход С4",price:"67грн",name:"fitting-c4"},
     {title: "Фитинг тройник С9",price:"72грн",name:"fitting-c9"},
@@ -27,13 +27,35 @@ mixin fittings-card-table(fitting)
                             th &#8960
                             th Thread
                     tbody
-                        for c in cList
+                        - var type = fitting.name
+                        tr
+                            td #{type}
+                        for c in c1
                             +c-table(c)
 
+-
+    var c1 = [
+    {ref:"C1",diameter: "4/2", thread:"1/8"},
+    {ref:"C1",diameter: "5/3", thread:"1/8"},
+    {ref:"C1",diameter: "6/4", thread:"1/8"},
+    {ref:"C1",diameter: "6/4", thread:"1/4"},
+    {ref:"C1",diameter: "8/6", thread:"1/8"},
+    {ref:"C1",diameter: "8/6", thread:"1/4"},
+    {ref:"C1",diameter: "10/8", thread:"1/8"},
+    {ref:"C1",diameter: "10/8", thread:"1/4"}
+    ];
 
 -
-    var cList = [{ref: "С1", diameter: "4/2", thread:"1/8"},
-    {ref: "С1", diameter: "4/2", thread:"1/8"}];
+    var c2 = [
+    {ref:"C2",diameter: "4/2", thread:"1/8"},
+    {ref:"C2",diameter: "5/3", thread:"1/8"},
+    {ref:"C2",diameter: "6/4", thread:"1/8"},
+    {ref:"C2",diameter: "6/4", thread:"1/4"},
+    {ref:"C2",diameter: "8/6", thread:"1/8"},
+    {ref:"C2",diameter: "8/6", thread:"1/4"},
+    {ref:"C2",diameter: "10/8", thread:"1/8"},
+    {ref:"C2",diameter: "10/8", thread:"1/4"}
+    ];
 
 
 mixin c-table(c)
@@ -48,11 +70,7 @@ section.kit
         for fitting in fittingsList
             +fittings-card-table(fitting)
 
--
-    var list = ["Uno", "Dos", "Tres",
-    "Cuatro", "Cinco", "Seis"]
-each item in list
-    li= item
+
 //table.table.table-hover
     tbody
         tr
