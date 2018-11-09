@@ -30,7 +30,62 @@
         list:
         {
         diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"],
-        thread: ["1/8", "1/4"]
+        thread: ["-", "-", "-", "-", "-"]
+        }
+        },
+        {
+        title: "Фитинг тройник С9",
+        imgName:"c9",
+        price: "72грн",
+        type: "C9",
+        list:
+        {
+        diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"],
+        thread: ["-", "-", "-", "-", "-"]
+        }
+        },
+        {
+        title: "Фитинг соединитель переход С3",
+        imgName:"c3",
+        price: "45грн",
+        type: "C3",
+        list:
+        {
+        diameter: ["6/4", "8/6", "10/8", "12/10"],
+        thread: ["-", "-", "-", "-"]
+        }
+        },
+        {
+        title: "Фитинг тройник с наружной резьбой С7",
+        imgName:"c7",
+        price: "85грн",
+        type: "C7",
+        list:
+        {
+        diameter: ["5/3", "6/4", "6/4","8/6", "8/6", "8/6","10/8", "10/8", "10/8", "12/10", "12/10"],
+        thread: ["1/8", "1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2", "3/8", "1/2"]
+        }
+        },
+        {
+        title: "Фитинг прямой с внутренней резьбой С2",
+        imgName:"c2",
+        price: "44грн",
+        type: "C2",
+        list:
+        {
+        diameter: ["6/4", "6/4", "8/6", "8/6", "8/6","10/8", "10/8", "10/8"],
+        thread: ["1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2"]
+        }
+        },
+        {
+        title: "Фитинг четверной С11",
+        imgName:"c11",
+        price: "95грн",
+        type: "C11",
+        list:
+        {
+        diameter: ["6/4", "8/6", "10/8"],
+        thread: ["-", "-", "-"]
         }
         }
     ];
@@ -38,7 +93,7 @@
 
 mixin fittings-card-table(fitting)
     div.card-group.col-12.mb-1.mb-sm-4.text-center
-        div.card.fitting
+        div.card.fitting.mb-0
             div.card-header
                 span.card-title.fitting__title= fitting.title
             div.card-body
@@ -46,11 +101,11 @@ mixin fittings-card-table(fitting)
             div.card-footer
                 p.card-text.draw-attention= fitting.price
         div.card.fitting
-            p.card-text.
+            //p.card-text.
                 Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая,
                 резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
             div.card-body
-                table.table.table-hover.table-sm
+                table.table.table-striped.table-bordered.table-sm.mb-0
                     thead
                         tr
                             th Ref.
@@ -63,9 +118,13 @@ mixin fittings-card-table(fitting)
                                 td= fitting.list.diameter[index]
                                 td= fitting.list.thread[index]
 
-section.kit
-    h2.kit__title.my-5.text-center Фитинги
-    div.kit__gallery.d-flex.flex-wrap
-        for fitting in fittingsList
-            +fittings-card-table(fitting)
+section.kit.kit_fittings
+    div.nn_container
+        h2.kit__title.my-5.text-center Фитинги
+        p.card-text.px-3.mb-5.text-center.
+            Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая,
+            резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
+        div.kit__gallery.d-flex.flex-wrap
+            for fitting in fittingsList
+                +fittings-card-table(fitting)
 
