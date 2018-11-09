@@ -1,3 +1,4 @@
+/*Animista*/
 @keyframes shadow-drop-2-center{
   0%{
     transform:translateZ(0);
@@ -195,6 +196,22 @@
     animation-timing-function:ease-out;
   }
 }
+@keyframes swing-in-left-fwd{
+  0%{
+    -webkit-transform:rotateY(100deg);
+    transform:rotateY(100deg);
+    -webkit-transform-origin:left;
+    transform-origin:left;
+    opacity:0;
+  }
+  100%{
+    -webkit-transform:rotateY(0deg);
+    transform:rotateY(0deg);
+    -webkit-transform-origin:left;
+    transform-origin:left;
+    opacity:1;
+  }
+}
 .bounce-in-top{
   animation:bounce-in-top 1.1s 3s both
 }
@@ -207,26 +224,50 @@
 .shadow-drop-2-center:hover{
   animation:shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.swing-in-top-fwd{
-  animation:swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+.swing-in-left-fwd{
+  -webkit-animation:swing-in-left-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
+  animation:swing-in-left-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
 }
+/*end Animista*/
+
+/*Sprites*/
+
+/*end sprites*/
+
+/*Main*/
 .kit{
   max-width:1200px;
   margin:0 auto;
   padding:0 15px;
   &__gallery{
-    .card{
-      &:hover{
-        box-shadow:0 0 20px 1px rgba(0, 0, 0, .5);
-      }
-      &-header, &-footer{
-        padding-left:.25rem;
-        padding-right:.25rem;
-        color:$white;
-      }
-      &-header{
-        background-color:$blue;
-      }
+  }
+}
+.card{
+  &.fitting{
+    img{
+      width:50%;
+    }
+    .card-body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    &:hover{
+      box-shadow:none;
+    }
+  }
+  &:hover{
+    box-shadow:0 0 20px 1px rgba(0, 0, 0, .5);
+  }
+  &-header, &-footer{
+    color:$white;
+    padding-left:.25rem;
+    padding-right:.25rem;
+  }
+  &-header{
+    background-color:$blue;
+    &_small{
+      font-size:16px;
     }
   }
 }
@@ -242,26 +283,39 @@
   }
 }
 .auto{
+  cursor:pointer;
   &__title{
     font-weight:bold;
+    text-transform:capitalize;
   }
   &__price{
     color:$orange;
+  }
+}
+.brand{
+  &__img{
+    box-shadow:5px 0px 16px rgba(0, 0, 0, 0.2);
+  }
+  &__title{
+    color:$blue;
+    text-transform:capitalize;
+  }
+  tr.border-bottom td{
+    border-bottom:1px solid #dee2e6;
   }
 }
 .contacts{
   ifrime{
     border:5px solid $orange;
   }
-  &__title{
-    color:$blue;
-  }
   a{
     color:white;
   }
 }
-.text-white a{
-  color:white;
+.fittings{
+  &__type{
+    text-transform:capitalize;
+  }
 }
 .gallery{
   &__title{
@@ -353,8 +407,24 @@
     margin:0 auto 60px;
   }
 }
+.icon{
+  &_info{
+    background:url('../../dist/img/icons/info.png');
+    cursor:pointer;
+    display:inline-block;
+    height:20px;
+    opacity:.4;
+    position:relative;
+    top:4px;
+    left:15px;
+    width:20px;
+    &:hover{
+      opacity:1;
+    }
+  }
+}
 .slogan{
-  background:url("/dist/img/car.jpg") center;
+  background:url("../../dist/img/car.jpg") center;
   background-size:cover;
   color:white;
   position:relative;
@@ -493,3 +563,4 @@
   -moz-transform:translateY(0px);
   transform:translateY(0px);
 }
+

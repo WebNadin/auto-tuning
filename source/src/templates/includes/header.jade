@@ -10,16 +10,16 @@ header
             div.p-4.text-center
                 a.nav-link.text-white(href='/')
                     span Главная
-                //a.nav-link.text-white(href='#')
+                a.nav-link(href='/pages/components.html', data-hover="Комплектующие")
                     span Комплектующие
-                //a.nav-link.text-white(href='#')
+                a.nav-link(href='/pages/passenger.html', data-hover="Легковые")
                     span Легковые
                 a.nav-link.text-white(href='/pages/answers.html')
                     span ЧаВо
                 a.nav-link.text-white(href='/pages/contacts.html')
                     span Контакты
     div.header__content.text-white.border-0.header.pr-3.pl-3.pb-4.p-md-3
-        div.container
+        div.nn-container
             div.row
                 div.col-12.col-sm-6.col-md-4.d-flex.flex-column.align-items-center.align-items-sm-start.justify-content-between.order-3.order-sm-0.mb-3.mb-sm-0
                     div.schedule.mb-3.d-none.d-sm-block
@@ -55,7 +55,7 @@ header
                             div.row.justify-content-between
                                 div.col-auto.align-self-end
                                     a.social-icons__item.bounce-in-top.d-inline-block(href="/pages/contacts.html",
-                                    target="_blank")(data-toggle="tooltip", data-placement="top",
+                                    target="_blank", data-toggle="tooltip", data-placement="top",
                                     title="показать на карте")
                                         img(src="/dist/img/map-icon.png")
                                 div.col-auto

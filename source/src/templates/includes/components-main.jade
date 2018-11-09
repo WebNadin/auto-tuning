@@ -1,0 +1,17 @@
+-
+    var componentsList = [{title: "Фитинги", name:"fittings"},{title: "Компрессор", name:"compressor"},{title:"Манометр", name:"indicator"},{title:"Управление", name:"management"},{title:"Влагоотделитель",name:"water-filter"},{title:"Трубка", name:"tube"},{title:"Ресивер", name:"reciever"},{title:"Пневморессоры",name:"pneumatic-spring"}];
+
+mixin components-card(folder)
+    div.card-group.col-12.col-sm-6.col-lg-3.mb-1.mb-sm-4.text-center
+        div.card.component-group.shadow-drop-2-center
+            div.card-header
+                span.card-title.component-group__title= folder.title
+            div.card-body
+                a(href= folder.name + ".html")
+                    img.card-img.component-group__img(src="/dist/img/components/" + folder.name + ".jpg")
+
+section.kit
+    h2.kit__title.my-5.text-center Комплектующие
+    div.kit__gallery.d-flex.flex-wrap
+        for folder in componentsList
+            +components-card(folder)
