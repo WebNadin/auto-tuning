@@ -39,8 +39,8 @@
 
 
 mixin compressor-card-table(type)
-    div.card-group.col-12.col-sm-4.mb-1.mb-sm-4.text-center
-        div.card._pointer.mb-0
+    div.card-group.col-12.col-sm-6.mb-1.mb-sm-4.text-center
+        div.card._pointer._no-shadow-hover.mb-0
             div.card-header.card-header_small
                 span.card-title.fitting__title= type.title
             div.card-body
@@ -51,6 +51,6 @@ mixin compressor-card-table(type)
 section.kit.kit_fittings.mb-5
     div.nn_container
         h2.kit__title.my-5.text-center Компрессор
-        div.kit__gallery.d-flex.flex-wrap.justify-content-center
+        div.kit__gallery.d-flex.flex-wrap.w_90.justify-content-center
             for type in compressorList
                 +compressor-card-table(type)
