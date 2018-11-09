@@ -409,7 +409,7 @@
 }
 .icon{
   &_info{
-    background:url('dist/img/icons/info.png');
+    background:url('../../dist/img/icons/info.png');
     cursor:pointer;
     display:inline-block;
     height:20px;
@@ -424,7 +424,7 @@
   }
 }
 .slogan{
-  background:url("/dist/img/car.jpg") center;
+  background:url("../../dist/img/car.jpg") center;
   background-size:cover;
   color:white;
   position:relative;

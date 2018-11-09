@@ -1,49 +1,56 @@
 -
     var compressorList = [
         {
-        title: "Фитинг прямой с наружной резьбой С1",
-        imgName:"c1",
-        price: "43грн"
+        title: "Компрессор Беркут R-17",
+        imgName:"bercut-r17",
+        price: "2950грн"
         },
         {
-        title: "Фитинг прямой с наружной резьбой С1",
-        imgName:"c1",
-        price: "43грн"
+        title: "Компрессор Беркут R-20",
+        imgName:"bercut-r20",
+        price: "5120грн"
         },
         {
-        title: "Фитинг прямой с наружной резьбой С1",
-        imgName:"c1",
-        price: "43грн"
+        title: "Компрессор Беркут PRO-20",
+        imgName:"bercut-pro-r20",
+        price: "5800грн"
         },
         {
-        title: "Фитинг прямой с наружной резьбой С1",
-        imgName:"c1",
-        price: "43грн"
+        title: "Компрессор Беркут PRO-24",
+        imgName:"bercut-pro-r24",
+        price: "7400грн"
         },
         {
-        title: "Фитинг прямой с наружной резьбой С1",
-        imgName:"c1",
-        price: "43грн"
+        title: "Дорожная карта DK31-002",
+        imgName:"dor-car-dk31-002",
+        price: "720грн"
+        },
+        {
+        title: "Дорожная карта DK31-003",
+        imgName:"dor-car-dk31-003",
+        price: "1900грн"
+        },
+        {
+        title: "Дорожная карта DK31-112",
+        imgName:"dor-car-dk31-112",
+        price: "1200грн"
         }
     ];
 
 
 mixin compressor-card-table(type)
-    div.card-group.col-12.col-sm-4.mb-1.mb-sm-4.text-center
+    div.card-group.col-12.col-sm-3.mb-1.mb-sm-4.text-center
         div.card.fitting.mb-0
             div.card-header.card-header_small
                 span.card-title.fitting__title= type.title
             div.card-body
-                img.card-img(src="/dist/img/fittings/" + type.imgName + ".jpg")
+                img.card-img(src="/dist/img/compressor/" + type.imgName + ".jpg")
             div.card-footer
                 p.card-text.draw-attention= type.price
 
-section.kit.kit_fittings
+section.kit.kit_fittings.mb-5
     div.nn_container
-        h2.kit__title.my-5.text-center Фитинги
-        p.card-text.px-3.mb-5.text-center.
-            Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая,
-            резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
+        h2.kit__title.my-5.text-center Компрессор
         div.kit__gallery.d-flex.flex-wrap.justify-content-center
             for type in compressorList
                 +compressor-card-table(type)
