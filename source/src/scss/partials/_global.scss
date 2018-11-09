@@ -15,8 +15,11 @@ body{
   margin:0 auto;
   width:100%;
 }
-a[href^=tel]{
-  color:white;
+a{
+  outline: none;
+  &[href^=tel]{
+    color:white;
+  }
 }
 /*.table td{
   border:0;
@@ -26,15 +29,15 @@ a[href^=tel]{
   margin:0 auto;
   max-width:1200px;
 }
-
 .draw-attention{
   color:$orange;
+}
+._pointer{
+  cursor:pointer;
 }
 .text-white a{
   color:white;
 }
-
-
 /*.main {
 background:$background-gray;
 }*/
