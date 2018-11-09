@@ -1,0 +1,49 @@
+-
+    var compressorList = [
+        {
+        title: "Фитинг прямой с наружной резьбой С1",
+        imgName:"c1",
+        price: "43грн"
+        },
+        {
+        title: "Фитинг прямой с наружной резьбой С1",
+        imgName:"c1",
+        price: "43грн"
+        },
+        {
+        title: "Фитинг прямой с наружной резьбой С1",
+        imgName:"c1",
+        price: "43грн"
+        },
+        {
+        title: "Фитинг прямой с наружной резьбой С1",
+        imgName:"c1",
+        price: "43грн"
+        },
+        {
+        title: "Фитинг прямой с наружной резьбой С1",
+        imgName:"c1",
+        price: "43грн"
+        }
+    ];
+
+
+mixin compressor-card-table(type)
+    div.card-group.col-12.col-sm-4.mb-1.mb-sm-4.text-center
+        div.card.fitting.mb-0
+            div.card-header.card-header_small
+                span.card-title.fitting__title= type.title
+            div.card-body
+                img.card-img(src="/dist/img/fittings/" + type.imgName + ".jpg")
+            div.card-footer
+                p.card-text.draw-attention= type.price
+
+section.kit.kit_fittings
+    div.nn_container
+        h2.kit__title.my-5.text-center Фитинги
+        p.card-text.px-3.mb-5.text-center.
+            Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая,
+            резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
+        div.kit__gallery.d-flex.flex-wrap.justify-content-center
+            for type in compressorList
+                +compressor-card-table(type)

@@ -1,16 +1,21 @@
--var componentsList = [{title: "фитинги", name:"fittings"},{title: "компрессор", name:"compressor"},{title:"манометр", name:"indicator"},{title:"управление", name:"management"},{title:"влагоотделитель",name:"water-filter"},{title:"трубка", name:"tube"},{title:"ресивер", name:"reciever"},{title:"пневморессоры",name:"pneumatic-spring"}];
+doctype html
+html(lang="ru")
+    include ../includes/head
+    body
+        include ../includes/header
+        div.menu.nn-container.d-none.d-md-flex.justify-content-end.w-100.swing-in-top-fwd
+            nav.nav.cl-effect-17
+                a.nav-link(href='/', data-hover="Главная")
+                    span Главная
+                a.nav-link(href='/pages/components.html', data-hover="Комплектующие")
+                    span Комплектующие
+                a.nav-link(href='/pages/passenger.html', data-hover="Легковые")
+                    span Легковые
+                a.nav-link(href='/pages/answers.html', data-hover="ЧаВо")
+                    span ЧаВо
+                a.nav-link(href='/pages/contacts.html', data-hover="Контакты")
+                    span Контакты
+        include ../includes/compressor-main.jade
+        include ../includes/footer
+        include ../includes/scripts
 
-mixin components-card(folder)
-    div.card-group.col-12.col-sm-6.col-lg-3.mb-1.mb-sm-4.text-center
-        div.card.component-group.shadow-drop-2-center
-            div.card-header
-                span.card-title.component-group__title= folder.title
-            div.card-body
-                a(href= folder.name + ".html")
-                    img.card-img.component-group__img(src="/dist/img/components/" + folder.name + ".jpg")
-
-section.kit
-    h2.kit__title.my-5.text-center Комплектующие
-    div.kit__gallery.d-flex.flex-wrap
-        for folder in componentsList
-            +components-card(folder)
