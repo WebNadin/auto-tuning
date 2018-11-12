@@ -1,0 +1,76 @@
+-
+    var pneumaticSpringList = [
+        {
+        title: "pneumatic-spring-2b-180",
+        imgName:"pneumatic-spring-2b-180",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-2b-220",
+        imgName:"pneumatic-spring-2b-220",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-cab",
+        imgName:"pneumatic-spring-cab",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-f-150",
+        imgName:"pneumatic-spring-f-150",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-reno",
+        imgName:"pneumatic-spring-reno",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-rp-130-3",
+        imgName:"pneumatic-spring-rp-130-3",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-rp-140-210",
+        imgName:"pneumatic-spring-rp-140-210",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-rp-170-2",
+        imgName:"pneumatic-spring-rp-170-2",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-rubena-130-2",
+        imgName:"pneumatic-spring-rubena-130-2",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-rubena-130-3",
+        imgName:"pneumatic-spring-rubena-130-3",
+        price: "цена грн"
+        },
+        {
+        title: "pneumatic-spring-skania",
+        imgName:"pneumatic-spring-skania",
+        price: "цена грн"
+        }
+    ];
+
+
+mixin pneumaticSpring-card(type)
+    div.card-group.col-12.col-sm-6.mb-1.mb-sm-4.text-center
+        div.card._pointer._no-shadow-hover._no-pointer-hover.mb-0
+            div.card-header.card-header_small
+                span.card-title.fitting__title= type.title
+            div.card-body
+                img.card-img(src="/dist/img/pneumatic-spring/" + type.imgName + ".jpg")
+            div.card-footer
+                p.card-text.draw-attention= type.price
+
+section.kit.kit_fittings.mb-5
+    div.nn_container
+        h2.kit__title.my-5.text-center Пневморессоры
+        div.kit__gallery.d-flex.flex-wrap.w_90.justify-content-center
+            for type in pneumaticSpringList
+                +pneumaticSpring-card(type)
