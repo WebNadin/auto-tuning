@@ -1,0 +1,36 @@
+-
+    var waterFilterList = [
+        {
+        title: "Заголовок 1",
+        imgName:"water-filter-1",
+        price: "цена 1 грн"
+        },
+        {
+        title: "Заголовок 2",
+        imgName:"water-filter-2",
+        price: "цена 2 грн"
+        },
+        {
+        title: "Заголовок 3",
+        imgName:"water-filter-3",
+        price: "цена 3 грн"
+        }
+    ];
+
+
+mixin waterFilter-card-table(type)
+    div.card-group.col-12.col-sm-4.mb-1.mb-sm-4.text-center
+        div.card._pointer._no-shadow-hover._no-pointer-hover.mb-0
+            div.card-header.card-header_small
+                span.card-title.fitting__title= type.title
+            div.card-body
+                img.card-img(src="/dist/img/water-filter/" + type.imgName + ".jpg")
+            div.card-footer
+                p.card-text.draw-attention= type.price
+
+section.kit.kit_fittings.mb-5
+    div.nn_container
+        h2.kit__title.my-5.text-center Влагоотделитель
+        div.kit__gallery.d-flex.flex-wrap.w_90.justify-content-center
+            for type in waterFilterList
+                +waterFilter-card-table(type)

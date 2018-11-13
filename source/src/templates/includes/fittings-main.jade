@@ -100,7 +100,7 @@ mixin fittings-card-table(fitting)
                 img.card-img(src="/dist/img/fittings/" + fitting.imgName + ".jpg")
             div.card-footer
                 p.card-text.draw-attention= fitting.price
-        div.card.fitting
+        div.card.fitting._no-shadow-hover._no-pointer-hover
             //p.card-text.
                 Фитинг данной серии предназначен для соединения трубок,таких как: нейлоновая, пластиковая,
                 резиновая. Накидная гайка затягивается гаечным ключом. Специальная форма конуса обеспечивает качественное соединение трубки.
@@ -118,7 +118,7 @@ mixin fittings-card-table(fitting)
                                 td= fitting.list.diameter[index]
                                 td= fitting.list.thread[index]
 
-section.kit.kit_fittings.mb-5
+section.kit.mb-5
     div.nn_container
         h2.kit__title.my-5.text-center Фитинги
         p.card-text.px-3.mb-5.text-center.
