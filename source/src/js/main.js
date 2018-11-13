@@ -15,7 +15,7 @@ $(document).ready(function () {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 3000
         });
     }
     else {
@@ -23,9 +23,25 @@ $(document).ready(function () {
             slidesToShow: 3,
             slidesToScroll: 3,
             autoplay: true,
-            autoplaySpeed: 6000,
+            autoplaySpeed: 6000
         });
     }
+   /* $('.single-item').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            }
+        ]
+    });*/
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
@@ -41,35 +57,11 @@ $(document).ready(function () {
         var title = localStorage.getItem('local_brand');
         var brandPhoto = localStorage.getItem('local_srcImg');
         $('.brand__title').text(title);
-        $('.brand__img').attr('src',brandPhoto);
+        $('.brand__img').attr('src', brandPhoto);
     }
+
     addTitle();
 });
 
-var data = {
-    'name': "files",
-    'type': "folder",
-    'path': "files",
-    'items': {
-        0: {
-            'name': "Cool_Reader",
-            'type': "folder",
-            'path': "files/Cool_Reader",
-            'items': {
-                0: {
-                    'name': "1",
-                    'type': "folder",
-                    'path': "files/Cool_Reader/1",
-                    'items': null
-                },
-                1: {
-                    'name': "2",
-                    'type': "folder",
-                    'path': "files/Cool_Reader/2",
-                    'items': null
-                }
-            }
-        }
-    }
-};
+
 

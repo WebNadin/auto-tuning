@@ -235,6 +235,12 @@
 /*end sprites*/
 
 /*Main*/
+.autoplay{
+  &_passenger{
+    width:80%;
+    margin:0 auto;
+  }
+}
 .kit{
   max-width:1200px;
   margin:0 auto;
@@ -414,11 +420,17 @@
     }
   }
 }
+.passenger{
+  margin:0 auto;
+  max-width:1200px;
+  overflow:hidden;
+}
 .recommendations{
   &__video{
     margin:0 auto 60px;
   }
 }
+
 .slogan{
   background:url("../../dist/img/car.jpg") center;
   background-size:cover;
