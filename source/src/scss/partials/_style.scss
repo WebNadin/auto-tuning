@@ -9,54 +9,7 @@
     box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.35);
   }
 }
-@-webkit-keyframes swing-in-top-fwd{
-  0%{
-    -webkit-transform:rotateX(-100deg);
-    transform:rotateX(-100deg);
-    -webkit-transform-origin:top;
-    transform-origin:top;
-    opacity:0;
-  }
-  100%{
-    -webkit-transform:rotateX(0deg);
-    transform:rotateX(0deg);
-    -webkit-transform-origin:top;
-    transform-origin:top;
-    opacity:1;
-  }
-}
-@-webkit-keyframes swing-in-top-fwd{
-  0%{
-    -webkit-transform:rotateX(-100deg);
-    transform:rotateX(-100deg);
-    -webkit-transform-origin:top;
-    transform-origin:top;
-    opacity:0;
-  }
-  100%{
-    -webkit-transform:rotateX(0deg);
-    transform:rotateX(0deg);
-    -webkit-transform-origin:top;
-    transform-origin:top;
-    opacity:1;
-  }
-}
-@keyframes swing-in-top-fwd{
-  0%{
-    -webkit-transform:rotateX(-100deg);
-    transform:rotateX(-100deg);
-    -webkit-transform-origin:top;
-    transform-origin:top;
-    opacity:0;
-  }
-  100%{
-    -webkit-transform:rotateX(0deg);
-    transform:rotateX(0deg);
-    -webkit-transform-origin:top;
-    transform-origin:top;
-    opacity:1;
-  }
-}
+
 @keyframes heartbeat{
   from{
     -webkit-transform:scale(1);
@@ -230,10 +183,6 @@
 }
 /*end Animista*/
 
-/*Sprites*/
-
-/*end sprites*/
-
 /*Main*/
 .autoplay{
   &_passenger{
@@ -245,8 +194,6 @@
   max-width:1200px;
   margin:0 auto;
   padding:0 15px;
-  &__gallery{
-  }
 }
 .card{
   &.fitting{
@@ -314,11 +261,7 @@
     color:white;
   }
 }
-/*.fittings{
-  &__type{
-    text-transform:capitalize;
-  }
-}*/
+
 .icon{
   &_info{
     background:url('../../dist/img/icons/info.png');
@@ -430,7 +373,6 @@
     margin:0 auto 60px;
   }
 }
-
 .slogan{
   background:url("../../dist/img/car.jpg") center;
   background-size:cover;
@@ -524,7 +466,7 @@
     z-index:2;
   }
 }
-/******* Фтомарные стили *******/
+/******* Атомарные стили *******/
 
 ._no-shadow-hover:hover{
   box-shadow:none;
@@ -532,7 +474,7 @@
 ._no-pointer-hover:hover{
   cursor:auto;
 }
-/******* end_Фтомарные стили *******/
+/******* end_Атомарные стили *******/
 
 .w_90{
   width:90%;
@@ -585,4 +527,3 @@
   -moz-transform:translateY(0px);
   transform:translateY(0px);
 }
-

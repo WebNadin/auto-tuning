@@ -1,5 +1,21 @@
--var carsList = [{title: "Fiat Doblo",price: "5500грн", name:"fiat-doblo"},{title: "Fiat Ducato",price:"5500грн",name:"fiat-ducato"},{title: "Ford Raptor",price:"5500грн", name:"ford-raptor"},{title: "Ford Transit",price:"5500грн",name:"ford-transit"},{title: "Gazel",price:"5500грн", name:"gazel"},{title: "Mercedes Benz 316",price:"5500грн",name:"mercedes-benz-316"},{title: "Mercedes Benz Vito",price:"5500грн", name:"mercedes-benz-vito"},{title: "Mercedes Vario",price:"5500грн", name:"mercedes-vario"},{title: "Opel Movano",price:"5500грн", name:"opel-movano"},{title: "Opel Vivaro",price:"5500грн", name:"opel-vivaro"},{title: "Peugeot Boxer",price:"5500грн", name:"peugeot-boxer"},{title: "Renault Master",price:"5500грн", name:"renault-master"},{title: "Renault Trafic",price:"5500грн", name:"renault-trafic"},{title: "Volga",price:"5500грн", name:"volga"},{title: "Volkswagen Crafter",price:"5500грн", name:"volkswagen-crafter"},{title: "Volkswagen transporter",price:"5500грн", name:"volkswagen-transporter"},]
-// etc...];
+-
+    var carsList = [{title: "Fiat Doblo",price: "5500грн", name:"fiat-doblo"},
+    {title: "Fiat Ducato",price:"5500грн",name:"fiat-ducato"},
+    {title: "Ford Raptor",price:"5500грн", name:"ford-raptor"},
+    {title: "Ford Transit",price:"5500грн",name:"ford-transit"},
+    {title: "Gazel",price:"5500грн", name:"gazel"},
+    {title: "Mercedes Benz 316",price:"5500грн",name:"mercedes-benz-316"},
+    {title: "Mercedes Benz Vito",price:"5500грн", name:"mercedes-benz-vito"},
+    {title: "Mercedes Vario",price:"5500грн", name:"mercedes-vario"},
+    {title: "Opel Movano",price:"5500грн", name:"opel-movano"},
+    {title: "Opel Vivaro",price:"5500грн", name:"opel-vivaro"},
+    {title: "Peugeot Boxer",price:"5500грн", name:"peugeot-boxer"},
+    {title: "Renault Master",price:"5500грн", name:"renault-master"},
+    {title: "Renault Trafic",price:"5500грн", name:"renault-trafic"},
+    {title: "Volga",price:"5500грн", name:"volga"},
+    {title: "Volkswagen Crafter",price:"5500грн",name:"volkswagen-crafter"},
+    {title: "Volkswagen transporter",price:"5500грн", name:"volkswagen-transporter"}]
+
 
 mixin auto-card(model)
     div.card-group.col-12.col-sm-6.col-lg-3.mb-1.mb-sm-4.text-center
@@ -12,11 +28,14 @@ mixin auto-card(model)
             div.card-footer
                 p.card-text.auto__price= model.price
 
--var worksList = ["works-1","works-2","works-3","works-4","works-5","works-6","works-7","works-8","works-9","works-10","works-11","works-12","works-13","works-14","works-15"]
+-
+    var worksList = ["works-1","works-2","works-3","works-4",
+    "works-5","works-6","works-7","works-8","works-9","works-10","works-11",
+    "works-12","works-13","works-14","works-15"]
 
 mixin gallery-works(name)
     div.my-slider__item
-        img(src="/dist/img/works/"+ name +".jpg").img-fluid.p-2
+        img(src="/dist/img/works/" + name + ".jpg").img-fluid.p-2
 
 section.slogan.d-flex.flex-column.justify-content-center.align-items-center.p-4
     div.slogan__nav.d-none.d-md-flex.justify-content-end.w-100.swing-in-top-fwd
@@ -55,22 +74,4 @@ section.gallery.mb-5
         div.slider.autoplay.slick-slider.slick-dotted(role="toolbar")
             for name in worksList
                 +gallery-works(name)
-            //div.my-slider__item
-                img(src="/dist/img/works/works-1.jpg").img-fluid.p-2
-            //div.my-slider__item
-                img(src="/dist/img/works/works-2.jpg").img-fluid.p-2
-            //div.my-slider__item
-                img(src="/dist/img/works/works-3.jpg").img-fluid.p-2
-            //div.my-slider__item
-                img(src="/dist/img/works/works-4.jpg").img-fluid.p-2
-            //div.my-slider__item
-                img(src="/dist/img/works/works-5.jpg").img-fluid.p-2
-            //div.my-slider__item
-                img(src="/dist/img/works/works-6.jpg").img-fluid.p-2
-
-
-
-
-
-
 
