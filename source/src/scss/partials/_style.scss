@@ -336,6 +336,8 @@
   }
 }
 .gallery{
+  margin: 0 auto;
+  max-width:1200px;
   &__title{
     color:$orange;
   }
@@ -430,7 +432,6 @@
     margin:0 auto 60px;
   }
 }
-
 .slogan{
   background:url("../../dist/img/car.jpg") center;
   background-size:cover;
