@@ -2,17 +2,21 @@
     var managementList = [
     {
     title: "Блок клапанов - двухконтурный",
-    description1: "Блок клапанов для двухконтурной пневмоподвески",
-    description2: "Материал изготовления - алюминий",
-    description3: "Подключение 1/8 и 1/4 дюйма",
+    description: [
+    'Блок клапанов для двухконтурной пневмоподвески',
+    'Материал изготовления - алюминий',
+    'Подключение 1/8 и 1/4 дюйма'
+    ],
     imgName:"valve-block-has-2-loops",
     price: "50000грн"
     },
     {
     title: "Блок клапанов - четырехконтурный",
-    description1: "Блок клапанов для четырехконтурной пневмоподвески",
-    description2: "Материал изготовления - алюминий",
-    description3: "Подключение 1/8 и 1/4 дюйма",
+    description: [
+    "Блок клапанов для четырехконтурной пневмоподвески",
+    "Материал изготовления - алюминий",
+    "Подключение 1/8 и 1/4 дюйма"
+    ],
     imgName:"valve-block-has-4-loops",
     price: "50000грн"
     },
@@ -28,23 +32,14 @@
     },
     {
     title: "Электромагнитный-газовый клапан.",
-    description1: "Используется так же для пневмоподвески",
-    description2: "Возможна замена фильтра",
+    description: [
+    "Используется так же для пневмоподвески",
+    "Возможна замена фильтра"
+    ],
     imgName:"electromagnetic-gas-valve",
     price: "50000грн"
     }
     ];
-
-mixin management-card-description-list(item)
-    ul
-        li
-            p.description__item= managementList.description1
-    ul
-        li
-            p.description__item= managementList.description2
-    ul
-        li
-            p.description__item= managementList.description3
 
 mixin management-card-table(type)
     div.card-group.col-12.col-sm-6.mb-1.mb-sm-4.text-center
@@ -54,17 +49,16 @@ mixin management-card-table(type)
             div.card-body
                 img.card-img(src="/dist/img/management/" + type.imgName + ".jpg")
                 div.description.text-left
-                    ul
-                        li
-                            p.description__item= type.description1
-                    ul
-                        li
-                            p.description__item= type.description2
-                    ul
-                        li
-                            p.description__item= type.description3
-                    //each item in managementList
-                        +management-card-description-list(item)
+                    - var DescArr = []
+                    - var getDescArr= type.description + ''
+                    - var newDescArr= getDescArr.split(",")
+                    - DescArr = newDescArr
+                    if type.description
+                        ul
+                            each item in DescArr
+                                    li=item
+                    else
+                        break
             div.card-footer
                 p.card-text.draw-attention= type.price
 
@@ -74,5 +68,6 @@ section.kit.kit_fittings.mb-5
         div.scheme.mt-0.mx-auto.mb-5
             img(src="/dist/img/management/scheme.jpg")
         div.kit__gallery.d-flex.flex-wrap.w_90.justify-content-center
-            for type in managementList
+            each type in managementList
                 +management-card-table(type)
+
