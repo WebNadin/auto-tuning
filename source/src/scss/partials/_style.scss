@@ -336,7 +336,7 @@
   }
 }
 .gallery{
-  margin: 0 auto;
+  margin:0 auto;
   max-width:1200px;
   &__title{
     color:$orange;
@@ -436,7 +436,8 @@
   text-align:center;
   width:70%;
   img{
-    border: 5px solid #012d5a;
+    box-shadow:0 0 21px 2px rgba(117,117,117,1);
+    /*border: 5px solid #012d5a;*/
   }
 }
 .slogan{
