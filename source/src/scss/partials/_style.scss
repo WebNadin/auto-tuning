@@ -249,7 +249,7 @@
   }
 }
 .card{
-  &.fitting{
+  &.fitting, &.reciever{
     img{
       width:50%;
     }

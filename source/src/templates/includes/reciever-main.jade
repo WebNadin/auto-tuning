@@ -3,20 +3,38 @@
         {
         title: "Заголовок 1",
         imgName:"reciever",
-        price: "цена 1 грн"
+        price: "от 300 грн",
+        list:
+        {
+        volume: ["5", "6", "9", "15"],
+        price: ["300", "380", "450", "600"]
+        }
         }
     ];
 
 
 mixin reciever-card(type)
-    div.card-group.col-12.col-sm-6.mb-1.mb-sm-4.text-center
-        div.card._pointer._no-shadow-hover._no-pointer-hover.mb-0
+    div.card-group.col-12.col-md-10.mb-1.mb-sm-4.text-center
+        div.card.reciever._pointer._no-shadow-hover._no-pointer-hover.mb-0
             div.card-header.card-header_small
-                span.card-title.fitting__title= type.title
+                span.card-title= type.title
             div.card-body
                 img.card-img(src="/dist/img/reciever/" + type.imgName + ".jpg")
             div.card-footer
                 p.card-text.draw-attention= type.price
+        div.card.reciever._no-shadow-hover._no-pointer-hover
+            div.card-body
+                table.table.table-striped.table-bordered.table-sm.mb-0
+                    thead
+                        tr
+                            th Объем, л
+                            th Цена, грн
+                    tbody
+                        for c, i in type.list.volume
+                            tr
+                                td= type.list.volume[i]
+                                td= type.list.price[i]
+
 
 section.kit.kit_fittings.mb-5
     div.nn_container
