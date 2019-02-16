@@ -1,0 +1,1 @@
+{"version":3,"sources":["partials/style.scss"],"names":[],"mappings":"AAAA;EACE,aAAW,EAIZ;EAHC;IACE,yBAAe;IAAf,iBAAe,EAChB;;AAID;EACE,oBAAkB,EACnB","file":"style.css","sourcesContent":[".card{\r\n  border:none;\r\n  &-img{\r\n    border-radius:0;\r\n  }\r\n}\r\n\r\n.slogan {\r\n  &__button{\r\n    border-color:green;\r\n  }\r\n}"]}

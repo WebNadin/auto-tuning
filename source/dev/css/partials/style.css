@@ -1,0 +1,10 @@
+.card {
+  border: none; }
+  .card-img {
+    -webkit-border-radius: 0;
+    border-radius: 0; }
+
+.slogan__button {
+  border-color: green; }
+
+/*# sourceMappingURL=style.css.map */
