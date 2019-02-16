@@ -1,93 +1,113 @@
 -
     var fittingsList = [
-        {
-        title: "Фитинг прямой с наружной резьбой С1",
-        imgName:"c1",
-        price: "43грн",
-        type: "C1",
-        list:
-            {
-            diameter: ["4/2", "5/3", "6/4", "6/4", "8/6", "8/6","10/8", "10/8"],
-            thread: ["1/8", "1/8", "1/8", "1/4", "1/8", "1/4", "1/8", "1/4"]
-            }
-        },
-        {
-        title: "Фитинг угловой с внутренней резьбой С5/F",
-        imgName:"c5f",
-        price: "48грн",
-        type: "C5/F",
-        list:
-        {
-        diameter: ["6/4", "8/6"],
-        thread: ["1/8", "1/4"]
-        }
-        },
-        {
-        title: "Фитинг соеденитель переход С4",
-        imgName:"c4",
-        price: "67грн",
-        type: "C4",
-        list:
-        {
-        diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"],
-        thread: ["-", "-", "-", "-", "-"]
-        }
-        },
-        {
-        title: "Фитинг тройник С9",
-        imgName:"c9",
-        price: "72грн",
-        type: "C9",
-        list:
-        {
-        diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"],
-        thread: ["-", "-", "-", "-", "-"]
-        }
-        },
-        {
-        title: "Фитинг соединитель переход С3",
-        imgName:"c3",
-        price: "45грн",
-        type: "C3",
-        list:
-        {
-        diameter: ["6/4", "8/6", "10/8", "12/10"],
-        thread: ["-", "-", "-", "-"]
-        }
-        },
-        {
-        title: "Фитинг тройник с наружной резьбой С7",
-        imgName:"c7",
-        price: "85грн",
-        type: "C7",
-        list:
-        {
-        diameter: ["5/3", "6/4", "6/4","8/6", "8/6", "8/6","10/8", "10/8", "10/8", "12/10", "12/10"],
-        thread: ["1/8", "1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2", "3/8", "1/2"]
-        }
-        },
-        {
-        title: "Фитинг прямой с внутренней резьбой С2",
-        imgName:"c2",
-        price: "44грн",
-        type: "C2",
-        list:
-        {
-        diameter: ["6/4", "6/4", "8/6", "8/6", "8/6","10/8", "10/8", "10/8"],
-        thread: ["1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2"]
-        }
-        },
-        {
-        title: "Фитинг четверной С11",
-        imgName:"c11",
-        price: "95грн",
-        type: "C11",
-        list:
-        {
-        diameter: ["6/4", "8/6", "10/8"],
-        thread: ["-", "-", "-"]
-        }
-        }
+    {
+    title: "Фитинг прямой с наружной резьбой С1",
+    imgName:"c1",
+    priceFrom: "от 30грн",
+    type: "C1",
+    list:
+    {
+    diameter: ["4/2", "5/3", "6/4", "6/4", "8/6", "8/6","8/6","10/8", "10/8"],
+    thread: ["1/8", "1/8", "1/8", "1/4", "1/8", "1/4","3/8", "1/8", "1/4"],
+    price: ["30", "30", "30", "63", "30", "30", "41", "36", "48"]
+    }
+    },
+    {
+    title: "Фитинг угловой с внутренней резьбой С5/F",
+    imgName:"c5f",
+    priceFrom: "от 44грн",
+    type: "C5",
+    list:
+    {
+    diameter: ["6/4", "8/6"],
+    thread: ["1/8", "1/4"],
+    price: ["60", "44"]
+    }
+    },
+    {
+    title: "Фитинг соеденитель переход С4",
+    imgName:"c4",
+    priceFrom: "от 70грн",
+    type: "C4",
+    list:
+    {
+    diameter: ["6/4", "8/6", "10/8", "12/10"],
+    thread: ["-", "-", "-", "-"],
+    price: ["70", "70", "80", "105"]
+    }
+    },
+    {
+    title: "Фитинг тройник С9",
+    imgName:"c9",
+    priceFrom: "от 65грн",
+    type: "C9",
+    list:
+    {
+    diameter: ["6/4", "8/6", "10/8", "12/10", "15/12.5"],
+    thread: ["-", "-", "-", "-", "-"],
+    price: ["65", "80", "110", "150", "220"]
+    }
+    },
+    {
+    title: "Фитинг соединитель переход С3",
+    imgName:"c3",
+    priceFrom: "от 48грн",
+    type: "C3",
+    list:
+    {
+    diameter: ["6/4", "8/6", "10/8", "12/10"],
+    thread: ["-", "-", "-", "-"],
+    price: ["48", "55", "67", "72"]
+    }
+    },
+    {
+    title: "Фитинг тройник с наружной резьбой С7",
+    imgName:"c7",
+    priceFrom: "от 70грн",
+    type: "C7",
+    list:
+    {
+    diameter: ["5/3", "6/4", "6/4","8/6", "8/6", "8/6","10/8", "10/8", "10/8", "12/10", "12/10", "15/12.5"],
+    thread: ["1/8", "1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2", "3/8", "1/2", "1/2"],
+    price: ["70", "75", "80", "90", "92", "94", "100", "120", "150", "140", "162", "200"]
+    }
+    },
+    {
+    title: "Фитинг прямой с внутренней резьбой С2",
+    imgName:"c2",
+    priceFrom: "от 45грн",
+    type: "C2",
+    list:
+    {
+    diameter: ["6/4", "6/4", "8/6", "8/6", "8/6","10/8", "10/8", "10/8"],
+    thread: ["1/8", "1/4", "1/8", "1/4", "3/8", "1/4", "3/8", "1/2"],
+    price: ["45", "50", "50", "55", "49", "51", "57", "86"]
+    }
+    },
+    {
+    title: "Фитинг четверной С11",
+    imgName:"c11",
+    priceFrom: "от 100грн",
+    type: "C11",
+    list:
+    {
+    diameter: ["6/4", "8/6", "10/8"],
+    thread: ["-", "-", "-"],
+    price: ["100", "115", "130"]
+    }
+    },
+    {
+    title: "Фитинг RL31/C",
+    imgName:"fitting-rl31-c",
+    priceFrom: "от 70грн",
+    type: "RL31/C",
+    list:
+    {
+    diameter: ["6/4", "8/6", "10/8"],
+    thread: ["-", "-", "-"],
+    price: ["100", "115", "130"]
+    }
+    }
     ];
 
 
@@ -99,7 +119,7 @@ mixin fittings-card-table(fitting)
             div.card-body
                 img.card-img(src="/dist/img/fittings/" + fitting.imgName + ".jpg")
             div.card-footer
-                p.card-text.draw-attention= fitting.price
+                p.card-text.draw-attention= fitting.priceFrom
         div.card.fitting._no-shadow-hover._no-pointer-hover
             div.card-body
                 table.table.table-striped.table-bordered.table-sm.mb-0
@@ -108,12 +128,14 @@ mixin fittings-card-table(fitting)
                             th Ref.
                             th &#8960
                             th Thread
+                            th Цена, грн
                     tbody
                         for c, index in fitting.list.diameter
                             tr
                                 td= fitting.type
                                 td= fitting.list.diameter[index]
                                 td= fitting.list.thread[index]
+                                td= fitting.list.price[index]
 
 section.kit.mb-5
     div.nn_container
