@@ -66,6 +66,9 @@
   header .logo img{
     height:35px;
   }
+  .card.tube {
+    flex:auto;
+  }
   .gallery{
     &__works{
       width:85%;
