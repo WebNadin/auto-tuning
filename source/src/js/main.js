@@ -26,22 +26,6 @@ $(document).ready(function () {
             autoplaySpeed: 6000
         });
     }
-   /* $('.single-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 6000,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                }
-            }
-        ]
-    });*/
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
