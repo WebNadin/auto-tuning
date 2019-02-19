@@ -184,16 +184,44 @@
 /*end Animista*/
 
 /*Main*/
+
+.answers{
+  ol{
+    /*color:$orange;*/
+    color:$blue;
+    font-size:1.25rem;
+  }
+  &__text{
+    color:$gray;
+    font-size:1rem;
+  }
+}
+.auto{
+  &__title{
+    font-weight:bold;
+    text-transform:capitalize;
+  }
+  &__price{
+    color:$orange;
+  }
+}
 .autoplay{
   &_passenger{
     width:80%;
     margin:0 auto;
   }
 }
-.kit{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 15px;
+.brand{
+  &__img{
+    box-shadow:5px 0px 16px rgba(0, 0, 0, 0.2);
+  }
+  &__title{
+    color:$blue;
+    text-transform:capitalize;
+  }
+  tr.border-bottom td{
+    border-bottom:1px solid #dee2e6;
+  }
 }
 .card{
   &.fitting{
@@ -219,38 +247,6 @@
     &_small{
       font-size:16px;
     }
-  }
-}
-.answers{
-  ol{
-    /*color:$orange;*/
-    color:$blue;
-    font-size:1.25rem;
-  }
-  &__text{
-    color:$gray;
-    font-size:1rem;
-  }
-}
-.auto{
-  &__title{
-    font-weight:bold;
-    text-transform:capitalize;
-  }
-  &__price{
-    color:$orange;
-  }
-}
-.brand{
-  &__img{
-    box-shadow:5px 0px 16px rgba(0, 0, 0, 0.2);
-  }
-  &__title{
-    color:$blue;
-    text-transform:capitalize;
-  }
-  tr.border-bottom td{
-    border-bottom:1px solid #dee2e6;
   }
 }
 .contacts{
@@ -293,6 +289,11 @@
   .slick-prev{
     left:-35px;
   }
+}
+.kit{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 15px;
 }
 .logo{
   a:hover{
@@ -372,6 +373,9 @@
   &__video{
     margin:0 auto 60px;
   }
+}
+.scheme{
+  text-align:center;
 }
 .slogan{
   background:url("../../dist/img/car.jpg") center;
