@@ -66,6 +66,11 @@
   header .logo img{
     height:35px;
   }
+  .b_info, .b_maps{
+    &__item{
+      width:100%;
+    }
+  }
   .card.tube{
     flex:auto;
   }

@@ -9,7 +9,6 @@
     box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.35);
   }
 }
-
 @keyframes heartbeat{
   from{
     -webkit-transform:scale(1);
@@ -211,6 +210,11 @@
     margin:0 auto;
   }
 }
+.b_info, .b_maps{
+  &__item{
+    width:48%;
+  }
+}
 .brand{
   &__img{
     box-shadow:5px 0px 16px rgba(0, 0, 0, 0.2);
@@ -257,7 +261,6 @@
     color:white;
   }
 }
-
 .icon{
   &_info{
     background:url('../../dist/img/icons/info.png');
@@ -300,6 +303,12 @@
     cursor:pointer;
   }
 }
+/*.marker{
+  &__title{
+    font-size:1.4rem;
+    margin-bottom:1rem;
+  }
+}*/
 .menu{
   nav{
     font-size:15px;
