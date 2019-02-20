@@ -355,6 +355,9 @@
       }
     }
   }
+  button.close:focus{
+    outline:0;
+  }
 }
 .navbar_mob{
   justify-content:space-between;
