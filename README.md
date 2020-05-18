@@ -1,6 +1,6 @@
 # Online-store: pneumatic system for trucks(Bootstrap, jQuery, CSS keyframes animation, Slick-slider)
 
-![Website working gif](https://github.com/WebNadin/auto-tuning/raw/master/readme-image.gif)
+![Website working gif](https://github.com/WebNadin/auto-tuning/raw/master/readme-img.gif)
 
 This project has main, questions, contacts pages; page for every car model; modal windows
 for each set of equipment; page with the characteristics in spreadsheets of each separately sold part; youtube
