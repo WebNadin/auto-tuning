@@ -2,6 +2,8 @@
 
 ![Website working gif](https://github.com/WebNadin/auto-tuning/raw/master/readme-img.gif)
 
+Result of one of the development stages you can see here: [pnevmo-garage](http://restaurant.inf.ua/)
+
 This project has main, questions, contacts pages; page for every car model; modal windows
 for each set of equipment; page with the characteristics in spreadsheets of each separately sold part; youtube
 presentation of workroom; slick gallery with examples of work. There are several types of animation using CSS keyframes.
